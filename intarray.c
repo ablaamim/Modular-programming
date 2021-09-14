@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/14 20:30:33 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/14 20:54:15 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,16 @@ int			intarray_search(intarray tab, int n);
 
 int			intarray_nb_occurences(intarray tab, int n);
 
+void	intarray_set(intarray tab, int index, int value)
+{
+	if ((index < 0) || (index > tab.len))
+	{
+		printf("ERROR\n");
+		return ;
+	}
+	tab.data[index] = value;
+}
+
 void	intarray_destroy(intarray tab)
 {
 	free(tab.data);
@@ -45,14 +55,17 @@ void	intarray_destroy(intarray tab)
 int		intarray_get(intarray tab, int index)
 {
 	if ((index < 0) || (index >= tab.len))
+	{
+		printf("\nERROR");
 		return (-1);
+	}
 	return (tab.data[index]);
 }
 
 intarray	intarray_create(int len)
 {
-	intarray tab;
-	int	i;
+	intarray	tab;
+	int			i;
 
 	i = 0;
 	tab.len = len;
@@ -129,9 +142,17 @@ int		intarray_nb_occurences(intarray tab, int n)
 
 int	main(void)
 {
-	intarray str = intarray_create(10);
+	intarray str = intarray_create(5);
+
+	intarray_set(str, 0, 42);
+	intarray_set(str, 1, -42);
+	intarray_set(str, 2, 1337);
+	intarray_set(str, 3, -1337);
+	intarray_set(str, 4, 19);
 	intarray_debug(str);
-	printf("\n%d\n", intarray_get(str, 1));
+	printf("\n%d\n", intarray_get(str, 2));
+	intarray_print_positive_values(str);
+	printf("\n");
 	intarray_destroy(str);
 	return (EXIT_SUCCESS);
 }
