@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/14 20:12:16 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/14 20:30:33 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,14 @@ struct	intarray
 	int len;
 };
 
+void		intarray_destroy(intarray tab);
+
+int			intarray_get(intarray tab, int index);
+
+void		intarray_set(intarray tab, int index, int value);
+
+int			intarray_length(intarray tab);
+
 intarray	intarray_create(int len);
 
 void		intarray_print_positive_values(intarray tab);
@@ -28,6 +36,18 @@ void		intarray_print_positive_values(intarray tab);
 int			intarray_search(intarray tab, int n);
 
 int			intarray_nb_occurences(intarray tab, int n);
+
+void	intarray_destroy(intarray tab)
+{
+	free(tab.data);
+}
+
+int		intarray_get(intarray tab, int index)
+{
+	if ((index < 0) || (index >= tab.len))
+		return (-1);
+	return (tab.data[index]);
+}
 
 intarray	intarray_create(int len)
 {
@@ -111,7 +131,7 @@ int	main(void)
 {
 	intarray str = intarray_create(10);
 	intarray_debug(str);
-	printf("\n");
-	free(str.data);
+	printf("\n%d\n", intarray_get(str, 1));
+	intarray_destroy(str);
 	return (EXIT_SUCCESS);
 }
