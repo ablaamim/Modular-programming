@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/14 20:54:15 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/14 23:06:30 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@ struct	intarray
 	int len;
 };
 
+
+int			intarray_get_min(intarray tab);
+
 void		intarray_destroy(intarray tab);
+
+intarray	intarray_concat(intarray T1, intarray T2);
 
 int			intarray_get(intarray tab, int index);
 
@@ -36,6 +41,35 @@ void		intarray_print_positive_values(intarray tab);
 int			intarray_search(intarray tab, int n);
 
 int			intarray_nb_occurences(intarray tab, int n);
+
+intarray	intarray_concat(intarray T1, intarray T2)
+{
+	intarray	T = intarray_create(T1.len + T2.len);
+	int	i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while(i < T1.len)
+	{
+		T.data[j] = T1.data[i];
+		i++;
+		j++;
+	}
+	i = 0;
+	while (i < T2.len)
+	{
+		T.data[j] = T2.data[i];
+		i++;
+		j++;
+	}
+	return (T);
+}
+
+int			intarray_length(intarray tab)
+{
+	return (tab.len);
+}
 
 void	intarray_set(intarray tab, int index, int value)
 {
@@ -138,12 +172,11 @@ int		intarray_nb_occurences(intarray tab, int n)
 	return (occurences);
 }
 
-
-
 int	main(void)
 {
-	intarray str = intarray_create(5);
-
+	intarray	str = intarray_create(5);
+	intarray	toto = intarray_create(10);
+	intarray	titi = intarray_create(10);
 	intarray_set(str, 0, 42);
 	intarray_set(str, 1, -42);
 	intarray_set(str, 2, 1337);
@@ -152,6 +185,8 @@ int	main(void)
 	intarray_debug(str);
 	printf("\n%d\n", intarray_get(str, 2));
 	intarray_print_positive_values(str);
+	printf("\n");
+	printf("%d", intarray_length(str));
 	printf("\n");
 	intarray_destroy(str);
 	return (EXIT_SUCCESS);
