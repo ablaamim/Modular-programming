@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tools.c                                            :+:      :+:    :+:   */
+/*   Statistics.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 02:28:10 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/16 00:31:26 by alaamimi         ###   ########.fr       */
+/*   Created: 2021/09/15 22:36:09 by alaamimi          #+#    #+#             */
+/*   Updated: 2021/09/16 00:29:25 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "intarray.h"
 #include "tools.h"
 
-int	string_to_int(char *str)
+int	main(int argc, char **argv)
 {
-	long int	res;
 	int	i;
-	int	sign;
 
-	res = 0;
 	i = 0;
-	sign = 1;
-	if (str[i] == '\0')
-		return(-1);
-	while (str[i] && (str[i] >= 7 && str[i] <= 32))
-		i++;
-	while (str[i] == '+' || str[i] == '-')
+	while (i < argc)
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		printf("%s\n", argv[i]);
 		i++;
 	}
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
-	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
-	}
-	res *= sign;
-	return (res);
+	printf("%d\n", string_to_int("256"));
+	return (EXIT_SUCCESS);
 }

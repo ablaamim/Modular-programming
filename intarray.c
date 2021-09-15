@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 22:17:16 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 22:27:41 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,11 @@ float	intarray_median(intarray tab)
 	int		v2;
 	float	median;
 
+	if (tab.len == 0)
+	{
+		printf("ERROR\n");
+		return (-1.0);
+	}
 	intarray copy = intarray_clone(tab);
 	v1 = copy.data[(copy.len - 1) / 2];
 	v2 = copy.data[copy.len / 2];
@@ -95,6 +100,11 @@ int	intarray_sum(intarray tab)
 	{
 		sum += tab.data[i];
 		i++;
+	}
+	if (tab.len == 0)
+	{
+		printf("ERROR\n");
+		return (-1.0);
 	}
 	return (sum);
 }
