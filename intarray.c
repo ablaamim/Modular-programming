@@ -6,13 +6,27 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 17:11:08 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 22:17:16 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "intarray.h"
+
+intarray	intarray_clone(intarray tab)
+{
+	intarray	copy = intarray_create(tab.len);
+	int			i;
+
+	i = 0;
+	while (i < tab.len)
+	{
+		copy.data[i] = tab.data[i];
+		i++;
+	}
+	return (copy);
+}
 
 float	intarray_average(intarray tab)
 {
@@ -31,34 +45,19 @@ float	intarray_average(intarray tab)
 
 float	intarray_median(intarray tab)
 {
-	int	cmp1;
-	int	cmp2;
-	int	tmp;
-	int	v1;
-	int v2;
+	int		v1;
+	int		v2;
+	float	median;
 
-	cmp1 = 0;
-	v1 = tab.data[(tab.len - 1) / 2];
-	v2 = tab.data[tab.len / 2];
-	while (cmp1 < tab.len)
-	{
-		cmp2 = cmp1 + 1;
-		while (cmp2 < tab.len)
-		{
-			if (tab.data[cmp2] < tab.data[cmp1])
-			{
-				tmp = tab.data[cmp1];
-				tab.data[cmp1] = tab.data[cmp2];
-				tab.data[cmp2] = tmp;
-			}
-			cmp2++;
-		}
-		cmp1++;
-	}
-	if (tab.len % 2 == 1)
-		return (tab.data[tab.len - 1] / 2);
+	intarray copy = intarray_clone(tab);
+	v1 = copy.data[(copy.len - 1) / 2];
+	v2 = copy.data[copy.len / 2];
+	intarray_sort(copy);
+	if (copy.len % 2 == 1)
+		median =copy.data[copy.len - 1] / 2;
 	else
-		return ((v1 + v2) / 2.0);
+		median = (v1 + v2) / 2.0;
+	intarray_destroy(copy);
 }
 
 void	intarray_sort(intarray tab)

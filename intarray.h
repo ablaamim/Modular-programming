@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 02:04:07 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 16:52:43 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 22:16:58 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ struct	intarray
 	int len;
 };
 
+
+intarray	intarray_clone(intarray tab);
 
 int			intarray_sum(intarray tab);
 

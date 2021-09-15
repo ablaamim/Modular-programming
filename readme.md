@@ -15,6 +15,7 @@
 
 |Function name | Prototype |
 |--- |--- |
+| intarray_clone | intarray	intarray_clone(intarray tab); |
 | intarray_sum | int			intarray_sum(intarray tab); |
 | intarray_average | float		intarray_average(intarray tab); |
 | intarray_median | float		intarray_median(intarray tab); |

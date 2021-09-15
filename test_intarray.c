@@ -6,13 +6,15 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 01:55:38 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 17:15:50 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 22:20:06 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "intarray.h"
+
+//TESTER OF ALL MODULES OF INTARRAY
 
 int	main(void)
 {
@@ -111,9 +113,9 @@ int	main(void)
 
 	intarray_debug(string1);
 	printf("\n");
-	intarray_sort(string1);
+	printf("%f\n", intarray_median(string1));
 	intarray_debug(string1);
-	printf("\n%f\n", intarray_median(string1));
+	printf("\n");
 
 	intarray_destroy(string1);
 	intarray_destroy(string);
