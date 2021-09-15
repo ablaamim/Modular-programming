@@ -14,8 +14,6 @@
 #include <stdlib.h>
 #include "intarray.h"
 
-void		intarray_sort1(intarray tab);
-
 void	intarray_sort(intarray tab)
 {
 	int	cmp1;

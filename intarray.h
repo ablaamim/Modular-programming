@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 02:04:07 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 02:05:46 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 02:10:53 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ struct	intarray
 	int	*data;
 	int len;
 };
+
+void		intarray_sort1(intarray tab);
 
 void		intarray_sort(intarray tab);
 
@@ -46,3 +48,4 @@ int			intarray_nb_occurences(intarray tab, int n);
 
 int			intarray_get_index_of_min(intarray tab);
 
+void		intarray_debug(intarray tab);
