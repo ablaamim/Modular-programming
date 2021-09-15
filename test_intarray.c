@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 01:55:38 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 02:06:48 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 16:30:08 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,13 @@ int	main(void)
 	intarray	str = intarray_create(5);
 	intarray	toto = intarray_create(3);
 	intarray	titi = intarray_create(4);
+	intarray	string = intarray_create(4);
+
+	intarray_set(string, 0, 1);
+	intarray_set(string, 1, 2);
+	intarray_set(string, 2, 10);
+	intarray_set(string, 3, 20);
+
 	intarray_set(str, 0, 42);
 	intarray_set(str, 1, -42);
 	intarray_set(str, 2, 1337);
@@ -82,7 +89,10 @@ int	main(void)
 	intarray_sort(titi);
 	intarray_debug(titi);
 	printf("\n");
-
+	intarray_debug(string);
+	printf("\n");
+	printf("%d\n", intarray_sum(string));
+	intarray_destroy(string);
 	intarray_destroy(toto);
 	intarray_destroy(titi);
 	intarray_destroy(str);

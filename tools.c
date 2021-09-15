@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 02:28:10 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 03:49:37 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 16:22:12 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	string_to_int(char *str)
 {
-	int	res;
+	long int	res;
 	int	i;
 	int	sign;
 
@@ -44,7 +44,7 @@ int	string_to_int(char *str)
 
 int	main(void)
 {
-	char	str[] = "52";
+	char	str[] = "-111152";
 
 	printf("%d\n", string_to_int(str));
 	return (EXIT_SUCCESS);
