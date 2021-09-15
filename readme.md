@@ -1,6 +1,6 @@
 ---
 
-## :fork_and_knife: Modular programming beyond the Spaghetti mess!
+## :fork_and_knife: Modular programming, beyond the Spaghetti mess!
 
 ---
 
