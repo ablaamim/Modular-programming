@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 01:05:14 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 01:45:34 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ struct	intarray
 	int len;
 };
 
+
+void		intarray_sort(intarray tab);
 
 int			intarray_get_index_of_min_from(intarray tab, int n);
 
@@ -46,7 +48,50 @@ int			intarray_nb_occurences(intarray tab, int n);
 
 int			intarray_get_index_of_min(intarray tab);
 
-int			intarray_get_index_of_min_from(intarray tab, int n)
+void		intarray_sort1(intarray tab);
+
+void	intarray_sort(intarray tab)
+{
+	int	cmp1;
+	int	cmp2;
+	int tmp;
+
+	cmp1 = 0;
+	while (cmp1 < tab.len)
+	{
+		cmp2 = cmp1 + 1;
+		while (cmp2 < tab.len)
+		{
+			if (tab.data[cmp2] < tab.data[cmp1])
+			{
+				tmp = tab.data[cmp1];
+				tab.data[cmp1] = tab.data[cmp2];
+				tab.data[cmp2] = tmp;
+			}
+			cmp2++;
+		}
+		cmp1++;
+	}
+}
+
+void	intarray_sort1(intarray tab)
+{
+	int	i;
+	int	index_min;
+	int	tmp;
+
+	i = 0;
+	while (i < tab.len - 1)
+	{
+		index_min = intarray_get_index_of_min_from(tab, i);
+		tmp = tab.data[i];
+		tab.data[i] = tab.data[index_min];
+		tab.data[index_min] = tmp;
+		i++;
+	}
+}
+
+int	intarray_get_index_of_min_from(intarray tab, int n)
 {
 	int	i;
 	int	index_min;
@@ -276,6 +321,24 @@ int	main(void)
 	printf("%d\n", intarray_get_index_of_min_from(str, 3));
 	printf("%d\n", intarray_get_index_of_min_from(toto, 1));
 	printf("%d\n", intarray_get_index_of_min_from(titi, 2));
+
+	intarray_debug(str);
+	printf("\n");
+	intarray_sort1(str);
+	intarray_debug(str);
+	printf("\n");
+	intarray_debug(toto);
+	printf("\n");
+	intarray_sort1(toto);
+	intarray_debug(toto);
+	printf("\n");
+
+	intarray_debug(titi);
+	printf("\n");
+	intarray_sort(titi);
+	intarray_debug(titi);
+	printf("\n");
+
 	intarray_destroy(toto);
 	intarray_destroy(titi);
 	intarray_destroy(str);
