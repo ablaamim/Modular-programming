@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-## ### Useful function to manipulate tables of integers : :
+---
+
+### Useful function to manipulate tables of integers : :
 
 |Function name | Prototype |
 |--- |--- |
