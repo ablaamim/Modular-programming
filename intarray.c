@@ -6,13 +6,60 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 16:31:33 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 17:11:08 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "intarray.h"
+
+float	intarray_average(intarray tab)
+{
+	int	i;
+	int sum;
+
+	sum = 0;
+	i = 0;
+	while (i < tab.len)
+	{
+		sum += tab.data[i];
+		i++;
+	}
+	return ((sum + 0.0) / tab.len);
+}
+
+float	intarray_median(intarray tab)
+{
+	int	cmp1;
+	int	cmp2;
+	int	tmp;
+	int	v1;
+	int v2;
+
+	cmp1 = 0;
+	v1 = tab.data[(tab.len - 1) / 2];
+	v2 = tab.data[tab.len / 2];
+	while (cmp1 < tab.len)
+	{
+		cmp2 = cmp1 + 1;
+		while (cmp2 < tab.len)
+		{
+			if (tab.data[cmp2] < tab.data[cmp1])
+			{
+				tmp = tab.data[cmp1];
+				tab.data[cmp1] = tab.data[cmp2];
+				tab.data[cmp2] = tmp;
+			}
+			cmp2++;
+		}
+		cmp1++;
+	}
+	if (tab.len % 2 == 1)
+		return (tab.data[tab.len - 1] / 2);
+	else
+		return ((v1 + v2) / 2.0);
+}
 
 void	intarray_sort(intarray tab)
 {

@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 01:55:38 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 16:30:08 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 17:15:50 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,21 @@ int	main(void)
 	intarray	str = intarray_create(5);
 	intarray	toto = intarray_create(3);
 	intarray	titi = intarray_create(4);
-	intarray	string = intarray_create(4);
+	intarray	string = intarray_create(6);
+	intarray	string1 = intarray_create(5);
 
-	intarray_set(string, 0, 1);
-	intarray_set(string, 1, 2);
-	intarray_set(string, 2, 10);
-	intarray_set(string, 3, 20);
+	intarray_set(string1, 0, 2);
+	intarray_set(string1, 1, 1);
+	intarray_set(string1, 2, 5);
+	intarray_set(string1, 3, 4);
+	intarray_set(string1, 4, 6);
+
+	intarray_set(string, 0, 3);
+	intarray_set(string, 1, 5);
+	intarray_set(string, 2, 2);
+	intarray_set(string, 3, 10);
+	intarray_set(string, 4, 0);
+	intarray_set(string, 5, 6);
 
 	intarray_set(str, 0, 42);
 	intarray_set(str, 1, -42);
@@ -92,6 +101,21 @@ int	main(void)
 	intarray_debug(string);
 	printf("\n");
 	printf("%d\n", intarray_sum(string));
+	printf("%f\n\n", intarray_average(string));
+	intarray_debug(string);
+	printf("\n");
+	intarray_sort(string);
+	intarray_debug(string);
+	printf("\n");
+	printf("%f\n\n", intarray_median(string));
+
+	intarray_debug(string1);
+	printf("\n");
+	intarray_sort(string1);
+	intarray_debug(string1);
+	printf("\n%f\n", intarray_median(string1));
+
+	intarray_destroy(string1);
 	intarray_destroy(string);
 	intarray_destroy(toto);
 	intarray_destroy(titi);
