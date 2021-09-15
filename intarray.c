@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 00:51:26 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 01:05:14 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ struct	intarray
 	int len;
 };
 
+
+int			intarray_get_index_of_min_from(intarray tab, int n);
 
 int			intarray_get_min(intarray tab);
 
@@ -43,6 +45,27 @@ int			intarray_search(intarray tab, int n);
 int			intarray_nb_occurences(intarray tab, int n);
 
 int			intarray_get_index_of_min(intarray tab);
+
+int			intarray_get_index_of_min_from(intarray tab, int n)
+{
+	int	i;
+	int	index_min;
+	int min;
+
+	i = n + 1;
+	index_min = n;
+	min = tab.data[n];
+	while (i < tab.len)
+	{
+		if (tab.data[i] < min)
+		{
+			min = tab.data[i];
+			index_min = i;
+		}
+		i++;
+	}
+	return (index_min);
+}
 
 int	intarray_get_index_of_min(intarray tab)
 {
@@ -246,7 +269,13 @@ int	main(void)
 	printf("%d\n", intarray_get_min(toto));
 	printf("%d\n", intarray_get_min(titi));
 	printf("%d\n", intarray_get_min(str));
+	printf("%d\n", intarray_get_index_of_min(str));
+	printf("%d\n", intarray_get_index_of_min(toto));
 	printf("%d\n", intarray_get_index_of_min(titi));
+
+	printf("%d\n", intarray_get_index_of_min_from(str, 3));
+	printf("%d\n", intarray_get_index_of_min_from(toto, 1));
+	printf("%d\n", intarray_get_index_of_min_from(titi, 2));
 	intarray_destroy(toto);
 	intarray_destroy(titi);
 	intarray_destroy(str);
