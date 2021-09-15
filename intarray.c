@@ -6,47 +6,13 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:17:50 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/15 01:45:34 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/15 02:06:14 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef  struct intarray intarray;
-
-struct	intarray
-{
-	int	*data;
-	int len;
-};
-
-
-void		intarray_sort(intarray tab);
-
-int			intarray_get_index_of_min_from(intarray tab, int n);
-
-int			intarray_get_min(intarray tab);
-
-void		intarray_destroy(intarray tab);
-
-intarray	intarray_concat(intarray T1, intarray T2);
-
-int			intarray_get(intarray tab, int index);
-
-void		intarray_set(intarray tab, int index, int value);
-
-int			intarray_length(intarray tab);
-
-intarray	intarray_create(int len);
-
-void		intarray_print_positive_values(intarray tab);
-
-int			intarray_search(intarray tab, int n);
-
-int			intarray_nb_occurences(intarray tab, int n);
-
-int			intarray_get_index_of_min(intarray tab);
+#include "intarray.h"
 
 void		intarray_sort1(intarray tab);
 
@@ -131,6 +97,15 @@ int	intarray_get_index_of_min(intarray tab)
 		i++;
 	}
 	return (index_min);
+}
+
+void	intarray_swap(int *a, int *b)
+{
+	int	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 int	intarray_get_min(intarray tab)
@@ -277,70 +252,4 @@ int		intarray_nb_occurences(intarray tab, int n)
 		i++;
 	}
 	return (occurences);
-}
-
-int	main(void)
-{
-	intarray	str = intarray_create(5);
-	intarray	toto = intarray_create(3);
-	intarray	titi = intarray_create(4);
-	intarray_set(str, 0, 42);
-	intarray_set(str, 1, -42);
-	intarray_set(str, 2, 1337);
-	intarray_set(str, 3, -1337);
-	intarray_set(str, 4, 19);
-
-	intarray_set(toto, 0, 42);
-	intarray_set(toto, 1, -1337);
-	intarray_set(toto, 2, 101);
-
-	intarray_set(titi, 0, -42);
-	intarray_set(titi, 1, -69);
-	intarray_set(titi, 2, 19);
-	intarray_set(titi, 3, -19);
-
-	intarray_debug(str);
-	printf("\n%d\n", intarray_get(str, 2));
-	intarray_print_positive_values(str);
-	printf("\n");
-	printf("%d", intarray_length(str));
-	printf("\n");
-	intarray_debug(toto);
-	printf("\n");
-	intarray_debug(titi);
-	printf("\n");
-	intarray_debug(intarray_concat(toto, titi));
-	printf("\n");
-	printf("%d\n", intarray_get_min(toto));
-	printf("%d\n", intarray_get_min(titi));
-	printf("%d\n", intarray_get_min(str));
-	printf("%d\n", intarray_get_index_of_min(str));
-	printf("%d\n", intarray_get_index_of_min(toto));
-	printf("%d\n", intarray_get_index_of_min(titi));
-
-	printf("%d\n", intarray_get_index_of_min_from(str, 3));
-	printf("%d\n", intarray_get_index_of_min_from(toto, 1));
-	printf("%d\n", intarray_get_index_of_min_from(titi, 2));
-
-	intarray_debug(str);
-	printf("\n");
-	intarray_sort1(str);
-	intarray_debug(str);
-	printf("\n");
-	intarray_debug(toto);
-	printf("\n");
-	intarray_sort1(toto);
-	intarray_debug(toto);
-	printf("\n");
-
-	intarray_debug(titi);
-	printf("\n");
-	intarray_sort(titi);
-	intarray_debug(titi);
-	printf("\n");
-
-	intarray_destroy(toto);
-	intarray_destroy(titi);
-	intarray_destroy(str);
-	return (EXIT_SUCCESS);
 }
