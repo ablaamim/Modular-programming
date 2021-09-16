@@ -6,7 +6,7 @@
 /*   By: alaamimi <alaamimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 22:36:09 by alaamimi          #+#    #+#             */
-/*   Updated: 2021/09/16 00:29:25 by alaamimi         ###   ########.fr       */
+/*   Updated: 2021/09/16 00:59:02 by alaamimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,23 @@
 int	main(int argc, char **argv)
 {
 	int	i;
+	int	n;
+	int	real_len_of_tab;
 
-	i = 0;
+	real_len_of_tab = 0;
+	intarray tab = intarray_create(argc - 1);
+	i = 1;
 	while (i < argc)
 	{
-		printf("%s\n", argv[i]);
+		n = string_to_int(argv[i]);
+		intarray_set(tab, real_len_of_tab, n);
+		real_len_of_tab++;
+		printf("%d\n", n);
 		i++;
 	}
-	printf("%d\n", string_to_int("256"));
+	tab.len = real_len_of_tab;
+	intarray_debug(tab);
+	printf("\n");
+	intarray_destroy(tab);
 	return (EXIT_SUCCESS);
 }
