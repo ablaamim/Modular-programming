@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:12:38 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/02 13:31:14 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/02 20:10:18 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,20 @@ typedef struct s_intarray
 	int	len;
 }	t_intarray;
 
-void	ft_putstr(char *str);
-int    ft_intarray_get_index_max_from(t_intarray tab, int n);
-int    ft_intarray_get_index_min_from(t_intarray tab, int n);
-int    ft_intarray_get_index_max(t_intarray tab);
-int    ft_intarray_get_index_min(t_intarray tab);
-void    ft_putnbr(int nb);
-int    ft_intarray_nb_occurences(t_intarray tab, int n);
-void    ft_intarray_destroy(t_intarray tab);
-void    ft_intarray_set(t_intarray tab, int index, int value);
-t_intarray    ft_intarray_concat(t_intarray T1, t_intarray T2);
-int    ft_intarray_search(t_intarray tab, int n);
-void    ft_intarray_print_positive_values(t_intarray tab);
-t_intarray ft_intarray_create(int len);
+void		ft_putstr(char *str);
+int			ft_intarray_get_index_max_from(t_intarray tab, int n);
+int			ft_intarray_get_index_min_from(t_intarray tab, int n);
+int			ft_intarray_get_index_max(t_intarray tab);
+int			ft_intarray_get_index_min(t_intarray tab);
+void		ft_putnbr(int nb);
+int			ft_intarray_nb_occurences(t_intarray tab, int n);
+void		ft_intarray_destroy(t_intarray tab);
+void		ft_intarray_set(t_intarray tab, int index, int value);
+t_intarray	ft_intarray_concat(t_intarray T1, t_intarray T2);
+int			ft_intarray_search(t_intarray tab, int n);
+void		ft_intarray_print_positive_values(t_intarray tab);
+t_intarray	ft_intarray_create(int len);
+void		ft_intarray_sort(t_intarray tab);
 
 int	ft_intarray_get_index_max_from(t_intarray tab, int n)
 {
@@ -54,6 +55,34 @@ int	ft_intarray_get_index_max_from(t_intarray tab, int n)
 		n++;
 	}
 	return (n);
+}
+
+void	ft_swap(int *a, int *b)
+{
+	int	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+void	ft_intarray_sort(t_intarray tab)
+{
+	int	i;
+	int	tmp;
+
+	i = 0;
+	while (i < tab.len)
+	{
+		if (tab.data[i] > tab.data[tab.len - 1])
+		{
+			tmp = tab.data[i];
+			tab.data[i] = tab.data[tab.len];
+			tab.data[tab.len] = tmp;
+		}
+		tab.len--;
+		i++;
+	}
 }
 
 int	ft_intarray_get_index_min_from(t_intarray tab, int n)
@@ -331,6 +360,9 @@ int	main(int argc, char **argv)
 	ft_putnbr(ft_intarray_get_index_min_from(str, 4));
 	write(1, "\n", 1);
 	ft_putnbr(ft_intarray_get_index_max_from(str, -1));
+	write(1, "\n", 1);
+	ft_intarray_sort(str);
+	ft_intarray_debug(str);
 	write(1, "\n", 1);
 	ft_intarray_destroy(str1);
 	ft_intarray_destroy(str);
