@@ -6,37 +6,11 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:12:38 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/02 20:10:18 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 08:19:52 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#define FT_SUCCESS 1
-#define FT_FAILURE 0
-#define FT_ERROR -1
-
-typedef struct s_intarray
-{
-	int	*data;
-	int	len;
-}	t_intarray;
-
-void		ft_putstr(char *str);
-int			ft_intarray_get_index_max_from(t_intarray tab, int n);
-int			ft_intarray_get_index_min_from(t_intarray tab, int n);
-int			ft_intarray_get_index_max(t_intarray tab);
-int			ft_intarray_get_index_min(t_intarray tab);
-void		ft_putnbr(int nb);
-int			ft_intarray_nb_occurences(t_intarray tab, int n);
-void		ft_intarray_destroy(t_intarray tab);
-void		ft_intarray_set(t_intarray tab, int index, int value);
-t_intarray	ft_intarray_concat(t_intarray T1, t_intarray T2);
-int			ft_intarray_search(t_intarray tab, int n);
-void		ft_intarray_print_positive_values(t_intarray tab);
-t_intarray	ft_intarray_create(int len);
-void		ft_intarray_sort(t_intarray tab);
+#include "intarray.h"
 
 int	ft_intarray_get_index_max_from(t_intarray tab, int n)
 {
@@ -69,18 +43,18 @@ void	ft_swap(int *a, int *b)
 void	ft_intarray_sort(t_intarray tab)
 {
 	int	i;
-	int	tmp;
+	int	j;
 
 	i = 0;
 	while (i < tab.len)
 	{
-		if (tab.data[i] > tab.data[tab.len - 1])
+		j = i + 1;
+		while (j < tab.len)
 		{
-			tmp = tab.data[i];
-			tab.data[i] = tab.data[tab.len];
-			tab.data[tab.len] = tmp;
+			if (tab.data[i] > tab.data[j])
+				ft_swap(&tab.data[i], &tab.data[j]);
+			j++;
 		}
-		tab.len--;
 		i++;
 	}
 }
@@ -313,58 +287,4 @@ t_intarray	ft_intarray_concat(t_intarray T1, t_intarray T2)
 		j++;
 	}
 	return (T);
-}
-
-int	main(int argc, char **argv)
-{
-	(void)	argc;
-	(void)	argv;
-	int	n;
-
-	t_intarray str = ft_intarray_create(8);
-	t_intarray str1 = ft_intarray_create(5);
-	ft_intarray_set(str1, 0, 101);
-	ft_intarray_set(str1, 4, 69);
-	ft_intarray_set(str, 0, 42);
-	ft_intarray_set(str, 1, -42);
-	ft_intarray_set(str, 2, 69);
-	ft_intarray_set(str, 7, 1337);
-	ft_intarray_set(str, 3, 101);
-	ft_intarray_set(str, 4, 19);
-	ft_intarray_set(str, 5, -19);
-	ft_intarray_debug(str);
-	write(1, "\n", 1);
-	ft_intarray_debug(str1);
-	write(1, "\n" ,1);
-	n = ft_intarray_get(str, 42);
-	ft_putnbr(n);
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_length(str));
-	write(1, "\n", 1);
-	ft_intarray_debug(ft_intarray_concat(str1, str));
-	write(1, "\n", 1);
-	ft_intarray_debug(ft_intarray_concat(str, str1));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_length(str));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_length(str1));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_get_min(str));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_get_max(str));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_get_index_min(str));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_get_index_max(str));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_get_index_min_from(str, 4));
-	write(1, "\n", 1);
-	ft_putnbr(ft_intarray_get_index_max_from(str, -1));
-	write(1, "\n", 1);
-	ft_intarray_sort(str);
-	ft_intarray_debug(str);
-	write(1, "\n", 1);
-	ft_intarray_destroy(str1);
-	ft_intarray_destroy(str);
-	return (EXIT_SUCCESS);
 }
