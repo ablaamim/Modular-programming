@@ -6,11 +6,33 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:12:38 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 10:54:59 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:58:12 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
+
+void	ft_FAST_intarray_delete(t_intarray *tab, int index)
+{
+	if (index != tab->len - 1)
+	{
+		tab->data[index] = tab->data[tab->len - 1];
+	}
+	tab->len--;
+}
+
+void	ft_SLOW_intarray_delete(t_intarray *tab, int index)
+{
+	int	i;
+
+	i = index + 1;
+	while (i < tab->len)
+	{
+		tab->data[i - 1] = tab->data[i];
+		i++;
+	}
+	tab->len--;
+}
 
 t_intarray	ft_intarray_clone(t_intarray tab)
 {
