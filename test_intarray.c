@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 08:13:20 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 12:57:04 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 18:59:31 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,24 @@ int	main(int argc, char **argv)
 	t_intarray str = ft_intarray_create(8);
 	t_intarray str1 = ft_intarray_create(5);
 	t_intarray tab = ft_intarray_create(10);
-
+	t_intarray tab1 = ft_intarray_create(10);
 	ft_intarray_set(tab, 9, 42);
 	ft_intarray_set(tab, 5, 10);
 	ft_intarray_debug(tab);
 	printf("\n");
-	ft_FAST_intarray_delete(&tab, 4);
+	ft_FAST_intarray_delete(&tab, 5);
 	ft_intarray_debug(tab);
+	printf("\n");
+
+	ft_intarray_set(tab1, 4, 101);
+	ft_intarray_set(tab1, 9, 1337);
+	ft_intarray_debug(tab1);
+	printf("\n");
+	ft_SLOW_intarray_delete(&tab1, 5);
+	ft_intarray_debug(tab1);
+	printf("\n");
+	ft_intarray_add(&tab1, 12);
+	ft_intarray_debug(tab1);
 	printf("\n");
 
 	ft_intarray_set(str1, 0, 10);

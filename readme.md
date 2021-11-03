@@ -15,6 +15,7 @@
 
 |Function name | Prototype |
 |--- |--- |
+| ft_intarray_add | void	ft_intarray_add(t_intarray, int value) |
 | ft_SLOW_intarray_delete | void	ft_SLOW_intarray_delete(t_intarray tab, int index) |
 | ft_FAST_intarray_delete | void	ft_FAST_intarray_delete(t_intarray tab, int index) |
 | ft_atoi | int	ft_atoi(const char *str) |

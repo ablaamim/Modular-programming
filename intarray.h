@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 08:14:00 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 12:44:18 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 18:55:37 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@
 typedef struct	s_intarray
 {
 	int	*data;
+	int	alloc;
 	int	len;
 }    t_intarray;
 
+void		ft_intarray_add(t_intarray *tab, int value);
 void		ft_FAST_intarray_delete(t_intarray *tab, int index);
 void		ft_SLOW_intarray_delete(t_intarray *tab, int index);
 t_intarray	ft_intarray_clone(t_intarray tab);

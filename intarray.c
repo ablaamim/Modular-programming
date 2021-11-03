@@ -6,11 +6,22 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:12:38 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 12:58:12 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:01:39 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
+
+void	ft_intarray_add(t_intarray *tab, int value)
+{
+	if (tab->len == tab->alloc)
+	{
+		ft_putstr("Length is not enough for allocation.\n");
+		return;
+	}
+	tab->data[tab->len] = value;
+	tab->len++;
+}
 
 void	ft_FAST_intarray_delete(t_intarray *tab, int index)
 {
@@ -248,6 +259,7 @@ t_intarray ft_intarray_create(int len)
 	i = 0;
 	t_intarray tab;
 	tab.len = len;
+	tab.alloc = len;
 	tab.data = malloc (len * sizeof (int));
 	while (i < len)
 	{
