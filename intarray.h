@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 08:14:00 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 09:22:58 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:44:03 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ typedef struct	s_intarray
 	int	len;
 }    t_intarray;
 
-int			intarray_sum(t_intarrayy tab);
+float		ft_intarray_median(t_intarray tab);
+float		ft_intarray_average(t_intarray tab);
+int			ft_intarray_sum(t_intarray tab);
 int			ft_intarray_get(t_intarray tab, int index);
 void		ft_intarray_debug(t_intarray tab);
 void		ft_putstr(char *str);

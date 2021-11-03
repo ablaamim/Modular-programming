@@ -6,11 +6,68 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:12:38 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 09:00:38 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:54:59 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
+
+t_intarray	ft_intarray_clone(t_intarray tab)
+{
+	int	i;
+
+	i = 0;
+	t_intarray copy = ft_intarray_create(tab.len);
+	while (i < tab.len)
+	{
+		copy.data[i] = tab.data[i];
+		i++;
+	}
+	return (copy);
+}
+
+float	ft_intarray_median(t_intarray tab)
+{
+	int			v1;
+	int			v2;
+	float		median;
+	t_intarray	copy;
+
+	copy = ft_intarray_clone(tab);
+	v1 = tab.data[(tab.len - 1) / 2];
+	v2 = tab.data[tab.len / 2];
+	ft_intarray_sort1(tab);
+	if (tab.len % 2 == 1)
+		return (tab.data[(tab.len - 1) / 2]);
+	else
+		median = (v1 + v2) / 2.0;
+	ft_intarray_destroy(copy);
+	return (median);
+}
+
+float	ft_intarray_average(t_intarray tab)
+{
+	int		sum;
+	float	average;
+	sum = ft_intarray_sum(tab);
+	average = (sum * 1.0) / tab.len;
+	return (average);
+}
+
+int	ft_intarray_sum(t_intarray tab)
+{
+	int	sum;
+	int	i;
+
+	sum = 0;
+	i = 0;
+	while (i < tab.len)
+	{
+		sum += tab.data[i];
+		i++;
+	}
+	return (sum);
+}
 
 int	ft_intarray_get_index_max_from(t_intarray tab, int n)
 {
