@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:12:38 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 08:19:52 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 09:00:38 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_swap(int *a, int *b)
 	*b = tmp;
 }
 
-void	ft_intarray_sort(t_intarray tab)
+void	ft_intarray_sort1(t_intarray tab)
 {
 	int	i;
 	int	j;

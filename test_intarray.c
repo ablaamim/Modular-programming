@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 08:13:20 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/03 08:21:41 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/03 09:00:57 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int argc, char **argv)
 	write(1, "\n", 1);
 	ft_putnbr(ft_intarray_get_index_max_from(str, -1));
 	write(1, "\n", 1);
-	ft_intarray_sort(str);
+	ft_intarray_sort1(str);
 	ft_intarray_debug(str);
 	write(1, "\n", 1);
 	ft_intarray_destroy(str1);

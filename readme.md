@@ -15,6 +15,7 @@
 
 |Function name | Prototype |
 |--- |--- |
+| ft_atoi | int	ft_atoi(const char *str) |
 | ft_intarray_clone | intarray	intarray_clone(t_intarray tab); |
 | ft_intarray_sum | int			ft_intarray_sum(t_intarray tab); |
 | ft_intarray_average | float		ft_intarray_average(t_intarray tab); |
