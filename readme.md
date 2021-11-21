@@ -13,8 +13,11 @@
 
 ## Useful function to manipulate tables of integers :
 
-|Function name | Prototype |
-|--- |--- |
+|Function | Prototype |
+|---      |---        |
+| ft_intarray_debug | void	ft_intarray_debug(int *tab, int size) |
+| ft_print_numbers | void	ft_print_numbers(int n) |
+|  |  |
 
 ---
 
