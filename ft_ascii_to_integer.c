@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 17:59:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 18:06:21 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/25 18:26:50 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_ascii_to_integer(char *str)
 
 	res = 0;
 	sign = 1;
-	while(*str == 32 || (*str >= 9 && *str <= 13))
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-')
 		sign *= -1;
@@ -30,5 +30,5 @@ int	ft_ascii_to_integer(char *str)
 		res = res * 10 + *str - 48;
 		str++;
 	}
-	return (sign * res);;
+	return (sign * res);
 }

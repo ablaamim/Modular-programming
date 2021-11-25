@@ -33,6 +33,8 @@
 | ft_intarray_max | int ft_intarray_max(t_intarray tab) | Retrieves the maximum value of an array of integers |
 | ft_intarray_swap| void	ft_intarray_swap(int a, int b)| Swaps values between two integers |
 | ft_intarray_sort1 | void	ft_intarray_sort1(t_intarray tab) | Sorts a table of integers in ascending order |
+| ft_ascii_to_integer | int	ft_ascii_to_integer(char *str) | Converts ascii values to integers (Just like atoi's system function) |
+
 
 ---
 

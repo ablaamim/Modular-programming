@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:57:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 14:12:57 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/25 18:29:19 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_intarray	ft_intarray_create(int len)
 {
 	t_intarray	tab;
-	int	i;
+	int			i;
 
 	i = 0;
 	tab.len = len;
