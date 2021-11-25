@@ -17,13 +17,16 @@
 
 |Function | Prototype | Description |
 |---      |---        |--- |
-| ft_intarray_debug | void	ft_intarray_debug(int *tab, int size) | Display an array containing int values|
+| ft_intarray_debug | void	ft_intarray_debug(t_intarray tab) | Display an array containing int values|
 | ft_print_numbers | void	ft_print_numbers(int n) | Print a number using write() system call|
-| ft_intarray_print_positive_values | ft_intarray_print_positive_values(int *tab, int len) | Find positive numbers in an array and print them |
+| ft_intarray_print_positive_values | void ft_intarray_print_positive_values(t_intarray) | Find positive numbers in an array and print them |
 | ft_putchar| ft_putchar(char c) | Print a character in stdin using write() system call |
-| ft_intarray_search | ft_intarray_search(int *tab, int len, int n) | Scan an array of integers for a value, if the value accures the function returns 1, otherwise it returns 0. |
-| ft_intarray_nb_occurence | ft_intarray_nb_occurence(int *tab, int len, int n) | Count the number of occurences of an int value inside of an integer array and return it |
-| ft_intarray_create| ft_intarray_create(int len) | Create a table initialized with length of 0 values |
+| ft_intarray_search | void ft_intarray_search(t_intarray, int n) | Scan an array of integers for a value, if the value accures the function returns 1, otherwise it returns 0. |
+| ft_intarray_nb_occurence | int ft_intarray_nb_occurence(t_intarray, int n) | Count the number of occurences of an int value inside of an integer array and return it |
+| ft_intarray_create| t_intarray ft_intarray_create(int len) | Create a table initialized with length of 0 values |
+| ft_intarray_destroy | void	ft_intarray_destroy(t_intarray tab) | Frees the memory allocated |
+| ft_intarray_get | int ft_intarray_get(t_intarray tab, int index) | Retrieves the element in the index wanted |
+| ft_intarray_set | void	ft_intarray_set(t_intarray tab, int index, int value) | Sets a value in the wanted index |
 
 ---
 
