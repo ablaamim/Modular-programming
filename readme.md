@@ -13,7 +13,7 @@
 
 ## Useful function to manipulate tables of integers :
 
-### :information_source: Extending my libft with useful function!
+### :information_source: Extending my libft with more util function!
 
 |Function | Prototype | Description |
 |---      |---        |--- |
@@ -22,6 +22,8 @@
 | ft_intarray_print_positive_values | ft_intarray_print_positive_values(int *tab, int len) | Find positive numbers in an array and print them |
 | ft_putchar| ft_putchar(char c) | Print a character in stdin using write() system call |
 | ft_intarray_search | ft_intarray_search(int *tab, int len, int n) | Scan an array of integers for a value, if the value accures the function returns 1, otherwise it returns 0. |
+| ft_intarray_nb_occurence | ft_intarray_nb_occurence(int *tab, int len, int n) | Count the number of occurences of an int value inside of an integer array and return it |
+| ft_intarray_create| ft_intarray_create(int len) | Create a table initialized with length of 0 values |
 
 ---
 

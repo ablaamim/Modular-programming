@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   intarray.h                                         :+:      :+:    :+:   */
+/*   ft_intarray_create.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 18:42:03 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 14:02:11 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/11/25 13:57:25 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/11/25 14:06:35 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTARRAY_H
-#define INTARRAY_H
+#include "intarray.h"
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct s_intarray
+t_intarray	ft_intarray_create(int len)
 {
-	int	*data;
-	int	len;
-} t_intarray;
+	t_intarray	tab;
+	int	i;
 
-void	ft_intarray_debug(int *tab, int size);
-void	ft_print_numbers(int n);
-void	ft_putchar(char c);
-#endif
+	i = 0;
+	tab.len = len;
+	tab.data = malloc(sizeof(int) * len);
+	while (i < tab.len)
+	{
+		tab.data[i] = 0;
+		i++;
+	}
+	return (tab);
+}
