@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:42:03 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 17:28:55 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/25 17:39:49 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,7 @@ void		ft_intarray_set(t_intarray tab, int index, int value);
 t_intarray	ft_intarray_concat(t_intarray T1, t_intarray T2);
 int			ft_intarray_get_min(t_intarray tab);
 int			ft_intarray_max(t_intarray tab);
+void		ft_intarray_swap(int a, int b);
+void		ft_intarray_sort1(t_intarray tab);
+
 #endif
