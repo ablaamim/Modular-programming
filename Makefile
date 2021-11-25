@@ -6,7 +6,7 @@
 #    By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/25 17:51:44 by ablaamim          #+#    #+#              #
-#    Updated: 2021/11/25 18:24:54 by ablaamim         ###   ########.fr        #
+#    Updated: 2021/11/25 20:18:51 by ablaamim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS = ft_intarray_concat.c \
 	   ft_putchar.c \
 	   ft_ascii_to_integer.c \
 	   ft_intarray_sum.c \
+	   ft_intarray_clone.c \
 
 OBJS = $(SRCS:%.c=%.o)
 

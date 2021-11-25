@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_create.c                               :+:      :+:    :+:   */
+/*   ft_intarray_clone.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 13:57:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 20:45:16 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/11/25 20:11:56 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/11/25 20:17:53 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-t_intarray	ft_intarray_create(int len)
+t_intarray	ft_intarray_clone(t_intarray tab)
 {
-	t_intarray	tab;
+	t_intarray	copy;
 	int			i;
 
 	i = 0;
-	tab.len = len;
-	tab.data = malloc(sizeof(int) * len);
-	if (tab.data == NULL)
-		return (NULL);
+	copy = ft_intarray_create(tab.len);
 	while (i < tab.len)
 	{
-		tab.data[i] = 0;
+		copy.data[i] = tab.data[i];
 		i++;
 	}
-	return (tab);
+	return (copy);
 }

@@ -34,7 +34,7 @@
 | ft_intarray_swap| void	ft_intarray_swap(int a, int b)| Swaps values between two integers |
 | ft_intarray_sort1 | void	ft_intarray_sort1(t_intarray tab) | Sorts a table of integers in ascending order |
 | ft_ascii_to_integer | int	ft_ascii_to_integer(char *str) | Converts ascii values to integers (Just like atoi's system function) |
-
+| ft_intarray_clone | t_intarray ft_intarray_clone(t_intarray tab) | Clones an intarray into a new copy |
 
 ---
 
