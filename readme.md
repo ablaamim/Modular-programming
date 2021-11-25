@@ -13,13 +13,15 @@
 
 ## Useful function to manipulate tables of integers :
 
-|Function | Prototype |
-|---      |---        |
-| ft_intarray_debug | void	ft_intarray_debug(int *tab, int size) |
-| ft_print_numbers | void	ft_print_numbers(int n) |
-| ft_intarray_print_positive_values | ft_intarray_print_positive_values(int *tab, int len) |
-| ft_putchar| ft_putchar(char c) |
-| ft_intarray_search | ft_intarray_search(int *tab, int len, int n) |
+### :information_source: Extending my libft with useful function!
+
+|Function | Prototype | Description |
+|---      |---        |--- |
+| ft_intarray_debug | void	ft_intarray_debug(int *tab, int size) | Display an array containing int values|
+| ft_print_numbers | void	ft_print_numbers(int n) | Print a number using write() system call|
+| ft_intarray_print_positive_values | ft_intarray_print_positive_values(int *tab, int len) | Find positive numbers in an array and print them |
+| ft_putchar| ft_putchar(char c) | Print a character in stdin using write() system call |
+| ft_intarray_search | ft_intarray_search(int *tab, int len, int n) | Scan an array of integers for a value, if the value accures the function returns 1, otherwise it returns 0. |
 
 ---
 
