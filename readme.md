@@ -30,6 +30,8 @@
 | ft_intarray_len | int	ft_intarray_len(t_intarray tab) | Calculates the length of an integer array |
 | ft_intarray_concat |t_intarray ft_intarray_concat(t_intarray T1, t_intarray T2) | Concatenates two integer arrays |
 | ft_intarray_get_min | ft_intarray_get_min(t_intarray tab) | Retrives the minimum value of an integer tab |
+| ft_intarray_max | ft_intarray_max(t_intarray tab) | Retrieves the maximum value of an array of integers |
+| | | |
 
 ---
 
