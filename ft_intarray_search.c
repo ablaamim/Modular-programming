@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_intarray_search.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 18:43:08 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 12:47:31 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/11/25 12:50:01 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/11/25 12:55:24 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-void	ft_print_numbers(int n)
+int	ft_intarray_search(int *tab, int len, int n)
 {
-	long	nb;
+	int	i;
 
-	nb = (long) n;
-	if (nb < 0)
+	i = 0;
+	while (i < len)
 	{
-		write(1, "-", 1);
-		nb *= -1;
+		if (tab[i] == n)
+			return (1);
+		i++;
 	}
-	if (nb > 9)
-		ft_print_numbers(nb / 10);
-	write(1, &"0123456789"[nb % 10], 1);
+	return (0);
 }

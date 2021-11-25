@@ -17,7 +17,9 @@
 |---      |---        |
 | ft_intarray_debug | void	ft_intarray_debug(int *tab, int size) |
 | ft_print_numbers | void	ft_print_numbers(int n) |
-|  |  |
+| ft_intarray_print_positive_values | ft_intarray_print_positive_values(int *tab, int len) |
+| ft_putchar| ft_putchar(char c) |
+| ft_intarray_search | ft_intarray_search(int *tab, int len, int n) |
 
 ---
 

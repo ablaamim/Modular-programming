@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_intarray_print_positive_values.c                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 18:43:08 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 12:47:31 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/11/25 12:35:25 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/11/25 12:55:37 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-void	ft_print_numbers(int n)
+void	ft_intarray_print_positive_values(int *tab, int len)
 {
-	long	nb;
+	int	i;
 
-	nb = (long) n;
-	if (nb < 0)
+	i = 0;
+	while (i < len)
 	{
-		write(1, "-", 1);
-		nb *= -1;
+		if (tab[i] >= 0)
+		{
+			ft_print_numbers(tab[i]);
+			ft_putchar(' ');
+		}
+		i++;
 	}
-	if (nb > 9)
-		ft_print_numbers(nb / 10);
-	write(1, &"0123456789"[nb % 10], 1);
 }

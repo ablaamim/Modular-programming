@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:42:03 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/20 18:56:26 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:40:23 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@
 
 void	ft_intarray_debug(int *tab, int size);
 void	ft_print_numbers(int n);
-
+void	ft_putchar(char c);
 #endif
