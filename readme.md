@@ -28,6 +28,7 @@
 | ft_intarray_get | int ft_intarray_get(t_intarray tab, int index) | Retrieves the element in the index wanted |
 | ft_intarray_set | void	ft_intarray_set(t_intarray tab, int index, int value) | Sets a value in the wanted index |
 | ft_intarray_len | int	ft_intarray_len(t_intarray tab) | Calculates the length of an integer array |
+| ft_intarray_concat |t_intarray ft_intarray_concat(t_intarray T1, t_intarray T2) | Concatenates two integer arrays |
 
 ---
 
