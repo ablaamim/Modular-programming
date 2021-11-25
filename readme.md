@@ -27,6 +27,7 @@
 | ft_intarray_destroy | void	ft_intarray_destroy(t_intarray tab) | Frees the memory allocated |
 | ft_intarray_get | int ft_intarray_get(t_intarray tab, int index) | Retrieves the element in the index wanted |
 | ft_intarray_set | void	ft_intarray_set(t_intarray tab, int index, int value) | Sets a value in the wanted index |
+| ft_intarray_len | int	ft_intarray_len(t_intarray tab) | Calculates the length of an integer array |
 
 ---
 

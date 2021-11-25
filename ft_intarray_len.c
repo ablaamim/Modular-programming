@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_set.c                                  :+:      :+:    :+:   */
+/*   ft_intarray_len.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 14:29:58 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 14:41:13 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/11/25 15:24:43 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/11/25 15:27:15 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-void	ft_intarray_set(t_intarray tab, int index, int value)
+int	ft_intarray_len(t_intarray tab)
 {
-	int	i;
-
-	i = 0;
-	while (i < tab.len)
-	{
-		if (tab.data[i] == tab.data[index])
-			tab.data[i] = value;
-		i++;
-	}
+	return (tab.len);
 }
