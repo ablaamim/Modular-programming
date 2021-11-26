@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:57:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/11/25 20:45:16 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/11/26 18:34:37 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ t_intarray	ft_intarray_create(int len)
 	i = 0;
 	tab.len = len;
 	tab.data = malloc(sizeof(int) * len);
-	if (tab.data == NULL)
-		return (NULL);
 	while (i < tab.len)
 	{
 		tab.data[i] = 0;
