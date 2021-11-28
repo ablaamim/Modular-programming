@@ -35,8 +35,7 @@
 | ft_intarray_sort1 | void	ft_intarray_sort1(t_intarray tab) | Sorts a table of integers in ascending order |
 | ft_ascii_to_integer | int	ft_ascii_to_integer(char *str) | Converts ascii values to integers (Just like atoi's system function) |
 | ft_intarray_clone | t_intarray ft_intarray_clone(t_intarray tab) | Clones an intarray into a new copy |
-| ft_intarray_delete | void	ft_intarray_delete(t_intarray tab, int index) | Deletes an element from the array of integers
-and keeps the array sorted |
+| ft_intarray_delete | void	ft_intarray_delete(t_intarray tab, int index) | Deletes an element from the array of integers and keeps the array sorted |
 | ft_unsorted_intarray_delete | void	ft_unsorted_intarray_delete(t_intarray tab, int index) | Deletes an element from an array of integers but we lose the element's order |
 
 ---
