@@ -26,8 +26,13 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 
 |Function | Description |
 |---      |--- |
-| [ft_intarray_debug()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_debug.c) | Prints an array of integers in a form of a real array with "[ ]" on borders.  |
-| [ft_putnbr()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_putnbr.c) | Printf numbers in the range of integer type, including INTMAX and INTMIN |
+| [ft_intarray_debug()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_debug.c) | Prints an array of integers in a form of a real array with "[ ]" on borders. |
+| [ft_putnbr()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_putnbr.c) | Prints numbers in the range of integer type, including INTMAX and INTMIN. |
+| [ft_intarray_print_positive_values()]() | Traverse an array of integers and filters the positive values to print them. |
+| [ft_intarray_search()]()| Traverse an array of ints searching for a set "n", if it accures the function returns 1, otherwise it returns 0. |
+| [ft_intarray_nb_occurences()]() | Traverse an array of ints counting the number of occurences, and it returns the count. |
+| [ft_intarray_create()]() | Constructor module, it creates an array of size len initialized with zeros. |
+
 
 ---
 

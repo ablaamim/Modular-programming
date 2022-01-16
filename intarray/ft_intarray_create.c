@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_debug.c                                :+:      :+:    :+:   */
+/*   ft_intarray_create.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 07:21:59 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/01/16 09:14:56 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/01/16 09:08:15 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/01/16 09:17:15 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-void	ft_intarray_debug(t_intarray tab)
+t_intarray	ft_intarray_create(int len)
 {
-	int	i;
+	t_intarray	tab;
+	int			i;
 
 	i = 0;
-	write(1, "[", 1);
-	while (i < tab.len - 1)
+	tab.len = len;
+	tab.data = malloc (sizeof(int) * len);
+	while (i < len)
 	{
-		ft_putnbr(tab.data[i]);
-		write(1, " ", 1);
+		tab.data[i] = 0;
 		i++;
 	}
-	ft_putnbr(tab.data[tab.len - 1]);
-	write(1, "]", 1);
+	return (tab);
+}
+
+int	main(void)
+{
+	t_intarray	tab = ft_intarray_create(8);
+
+	ft_intarray_debug(tab);
+	return (0);
 }

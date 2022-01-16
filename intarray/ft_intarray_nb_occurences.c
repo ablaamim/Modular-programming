@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_debug.c                                :+:      :+:    :+:   */
+/*   ft_intarray_nb_occurences.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 07:21:59 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/01/16 09:14:56 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/01/16 08:48:54 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/01/16 09:19:54 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-void	ft_intarray_debug(t_intarray tab)
+int	ft_intarray_nb_occurences(t_intarray tab, int n)
 {
 	int	i;
+	int	occ;
 
 	i = 0;
-	write(1, "[", 1);
-	while (i < tab.len - 1)
+	occ = 0;
+	while (i < tab.len)
 	{
-		ft_putnbr(tab.data[i]);
-		write(1, " ", 1);
+		if (tab.data[i] == n)
+			occ += 1;
 		i++;
 	}
-	ft_putnbr(tab.data[tab.len - 1]);
-	write(1, "]", 1);
+	return (occ);
 }

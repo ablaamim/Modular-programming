@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_debug.c                                :+:      :+:    :+:   */
+/*   ft_intarray_print_positive_values.c                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 07:21:59 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/01/16 09:14:56 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/01/16 08:28:00 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/01/16 09:19:23 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-void	ft_intarray_debug(t_intarray tab)
+void	ft_intarray_print_positive_values(t_intarray tab)
 {
 	int	i;
 
 	i = 0;
-	write(1, "[", 1);
-	while (i < tab.len - 1)
+	while (i < tab.len)
 	{
-		ft_putnbr(tab.data[i]);
-		write(1, " ", 1);
+		if (tab.data[i] >= 0)
+		{
+			ft_putnbr(tab.data[i]);
+		}
 		i++;
 	}
-	ft_putnbr(tab.data[tab.len - 1]);
-	write(1, "]", 1);
 }
