@@ -1,6 +1,6 @@
 ---
 
-## :fork_and_knife: Modular programming, beyond the Spaghetti mess :heavy_exclamation_mark:
+## :fork_and_knife: [Modular programming](https://en.wikipedia.org/wiki/Modular_programming), beyond the Spaghetti mess :heavy_exclamation_mark:
 
 ---
 
@@ -13,7 +13,8 @@
 
 ## :soccer: The goal :
 
-> Create a complete module in the rules of the art it is necessary to respect the [norm](https://github.com/ablaamim/Libft-Extended/blob/master/srcs/en.norm.pdf), as well as authorized functions at 1337 school [42 Network].
+> Create a complete module in the rules of the art it is necessary to respect the [norm](https://github.com/ablaamim/Libft-Extended/blob/master/srcs/en.norm.pdf), 
+as well as authorized functions at [1337](https://1337.ma/en/) school [42 Network].
 
 ---
 
@@ -23,8 +24,10 @@
 
 ### :information_source: Extending my libft with more util function!
 
-|Function | Prototype | Description |
-|---      |---        |--- |
-|   |   |   |
+|Function | Description |
+|---      |--- |
+| ft_intarray_debug() | Prints an array of integers in a form of a real array with "[ ]" on borders.  |
+| ft_putnbr() | Printf numbers in the range of integer type, including INTMAX and INTMIN |
+
 ---
 
