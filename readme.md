@@ -26,8 +26,8 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 
 |Function | Description |
 |---      |--- |
-| ft_intarray_debug() | Prints an array of integers in a form of a real array with "[ ]" on borders.  |
-| ft_putnbr() | Printf numbers in the range of integer type, including INTMAX and INTMIN |
+| [ft_intarray_debug()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_debug.c) | Prints an array of integers in a form of a real array with "[ ]" on borders.  |
+| [ft_putnbr()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_putnbr.c) | Printf numbers in the range of integer type, including INTMAX and INTMIN |
 
 ---
 
