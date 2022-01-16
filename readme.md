@@ -13,7 +13,7 @@
 
 ## :soccer: The goal :
 
-> Create a complete module in the rules of the art it is necessary to respect the norm, as well as authorized functions at 1337 school [42 Network].
+> Create a complete module in the rules of the art it is necessary to respect the [norm](https://github.com/ablaamim/Libft-Extended/blob/master/srcs/en.norm.pdf), as well as authorized functions at 1337 school [42 Network].
 
 ---
 
