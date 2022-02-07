@@ -29,13 +29,13 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 | [ft_intarray_debug()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_debug.c) | Prints an array of integers in a form of a real array with "[ ]" on borders. |
 | [ft_putnbr()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_putnbr.c) | Prints numbers in the range of integer type, including INTMAX and INTMIN. |
 | [ft_intarray_print_positive_values()]() | Traverse an array of integers and filters the positive values to print them. |
-| [ft_intarray_search()]()| Traverse an array of ints searching for a set "n", if it accures the function returns 1, otherwise it returns 0. |
-| [ft_intarray_nb_occurences()]() | Traverse an array of ints counting the number of occurences, and it returns the count. |
-| [ft_intarray_create()]() | Constructor module, it creates an array of size len initialized with zeros. |
-| [ft_intarray_set()]() | Assinging values in specific indexes. |
-| [ft_intarray_get()]() | Retrieves an element of an intarray by indexing |
-| [ft_intarray_sort()]() | Sorting an array of integers using selection sort. |
-| [ft_intarray_len()]() | Calculates the length of an intarray |
+| [ft_intarray_search()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_print_positive_values.c)| Traverse an array of ints searching for a set "n", if it accures the function returns 1, otherwise it returns 0. |
+| [ft_intarray_nb_occurences()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_nb_occurences.c) | Traverse an array of ints counting the number of occurences, and it returns the count. |
+| [ft_intarray_create()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_create.c) | Constructor module, it creates an array of size len initialized with zeros. |
+| [ft_intarray_set()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_set.c) | Assinging values in specific indexes. |
+| [ft_intarray_get()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_get.c) | Retrieves an element of an intarray by indexing |
+| [ft_intarray_sort()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_sort.c) | Sorting an array of integers using selection sort. |
+| [ft_intarray_len()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_len.c) | Calculates the length of an intarray |
 
 
 ---
