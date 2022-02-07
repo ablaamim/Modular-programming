@@ -32,6 +32,10 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 | [ft_intarray_search()]()| Traverse an array of ints searching for a set "n", if it accures the function returns 1, otherwise it returns 0. |
 | [ft_intarray_nb_occurences()]() | Traverse an array of ints counting the number of occurences, and it returns the count. |
 | [ft_intarray_create()]() | Constructor module, it creates an array of size len initialized with zeros. |
+| [ft_intarray_set()]() | Assinging values in specific indexes. |
+| [ft_intarray_get()]() | Retrieves an element of an intarray by indexing |
+| [ft_intarray_sort()]() | Sorting an array of integers using selection sort. |
+| [ft_intarray_len()]() | Calculates the length of an intarray |
 
 
 ---
