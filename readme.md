@@ -24,13 +24,13 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 
 ### :information_source: Extending my libft with more util function!
 
-| Struct used |
-|--- |
-| typedef struct s_intarray
+> Struct used :
+
+typedef struct s_intarray
 {
 	int	*tab;
 	int	len;
-} t_intarray; |
+} t_intarray;
 
 |Function | Description |
 |---      |--- |
