@@ -24,6 +24,14 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 
 ### :information_source: Extending my libft with more util function!
 
+| Struct used |
+|--- |
+| typedef struct s_intarray
+{
+	int	*tab;
+	int	len;
+} t_intarray; |
+
 |Function | Description |
 |---      |--- |
 | [ft_intarray_debug()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_debug.c) | Prints an array of integers in a form of a real array with "[ ]" on borders. |
