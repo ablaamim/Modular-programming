@@ -33,10 +33,11 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 | [ft_intarray_nb_occurences()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_nb_occurences.c) | Traverse an array of ints counting the number of occurences, and it returns the count. |
 | [ft_intarray_create()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_create.c) | Constructor module, it creates an array of size len initialized with zeros. |
 | [ft_intarray_set()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_set.c) | Assinging values in specific indexes. |
-| [ft_intarray_get()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_get.c) | Retrieves an element of an intarray by indexing |
+| [ft_intarray_get()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_get.c) | Retrieves an element of an intarray by indexing. |
 | [ft_intarray_sort()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_sort.c) | Sorting an array of integers using selection sort. |
-| [ft_intarray_len()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_len.c) | Calculates the length of an intarray |
-
+| [ft_intarray_len()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_len.c) | Calculates the length of an intarray. |
+| [ft_intarray_destroy()]() | Free what was allocated. |
+| [ft_intarray_sum()]() | sums up an intarray |
 
 ---
 
