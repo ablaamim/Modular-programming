@@ -39,6 +39,7 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 | [ft_intarray_destroy()]() | Free what was allocated. |
 | [ft_intarray_sum()]() | Sums up an intarray. |
 | [ft_intarray_average]()| Calculates the average of an intarray. |
+| [ft_intarray_median]() | Calculates the median of an intarray. |
 
 ---
 
