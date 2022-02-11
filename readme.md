@@ -37,7 +37,8 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 | [ft_intarray_sort()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_sort.c) | Sorting an array of integers using selection sort. |
 | [ft_intarray_len()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_len.c) | Calculates the length of an intarray. |
 | [ft_intarray_destroy()]() | Free what was allocated. |
-| [ft_intarray_sum()]() | sums up an intarray |
+| [ft_intarray_sum()]() | Sums up an intarray. |
+| [ft_intarray_average]()| Calculates the average of an intarray. |
 
 ---
 

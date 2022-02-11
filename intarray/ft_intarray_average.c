@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_destroy.c                              :+:      :+:    :+:   */
+/*   ft_intarray_average.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 15:43:31 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/11 16:10:47 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/11 16:04:35 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/02/11 16:12:27 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include"intarray.h"
 
-void	ft_intarray_destroy(t_intarray tab)
+ int	ft_intarray_average(t_intarray tab)
 {
-	free(tab.data);
+	int	i;
+	int	average;
+
+	i = 0;
+	average = 0;
+	while (i < tab.len)
+	{
+		average += tab.data[i];
+		i++;
+	}
+	average /= tab.len;
+	return (average);
 }
