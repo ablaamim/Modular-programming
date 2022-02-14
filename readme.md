@@ -33,6 +33,14 @@ typedef struct s_intarray
 } t_intarray;
 ```
 
+> Header file :
+
+```c
+	intarray.h
+```
+
+> Makefile
+
 |Function | Description |
 |---      |--- |
 | [ft_intarray_debug()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_debug.c) | Prints an array of integers in a form of a real array with "[ ]" on borders. |
