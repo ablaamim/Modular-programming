@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:25:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/14 01:29:28 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/02/14 02:01:18 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int			ft_ascii_to_int(char *str);
 int			ft_intarray_sum(t_intarray tab);
 int			ft_intarray_average(t_intarray tab);
 float		ft_intarray_median(t_intarray tab);
+t_intarray	ft_intarray_clone(t_intarray tab);
 
 #endif

@@ -53,10 +53,11 @@ typedef struct s_intarray
 | [ft_intarray_get()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_get.c) | Retrieves an element of an intarray by indexing. |
 | [ft_intarray_sort()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_sort.c) | Sorting an array of integers using selection sort. |
 | [ft_intarray_len()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_len.c) | Calculates the length of an intarray. |
-| [ft_intarray_destroy()]() | Free what was allocated. |
-| [ft_intarray_sum()]() | Sums up an intarray. |
-| [ft_intarray_average()]()| Calculates the average of an intarray. |
-| [ft_intarray_median()]() | Calculates the median of an intarray. |
+| [ft_intarray_destroy()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_destroy.c) | Free what was allocated. |
+| [ft_intarray_sum()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_sum.c) | Sums up an intarray. |
+| [ft_intarray_average()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_average.c)| Calculates the average of an intarray. |
+| [ft_intarray_median()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_median.c) | Calculates the median of an intarray. |
+| [ft_intarray_clone()]()| Create a clone of an intarray. |
 
 ---
 
