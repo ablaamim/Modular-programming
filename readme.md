@@ -57,9 +57,10 @@ typedef struct s_intarray
 | [ft_intarray_sum()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_sum.c) | Sums up an intarray. |
 | [ft_intarray_average()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_average.c)| Calculates the average of an intarray. |
 | [ft_intarray_median()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_median.c) | Calculates the median of an intarray. |
-| [ft_intarray_clone()]()| Create a clone of an intarray. |
-| [UNSORTED_intarray_delete()]()| Deletes an element from an intarray, but it changes order. (Good complexity) |
-| [ft_intarray_delete()]()| Deletes an element from an intarray, and it keeps its order. (Bad complexity) |
+| [ft_intarray_clone()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_clone.c)| Create a clone of an intarray. |
+| [UNSORTED_intarray_delete()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/UNSORTED_intarray_delete.c)| Deletes an element from an intarray, but it changes order. (Good complexity) |
+| [ft_intarray_delete()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_delete.c)| Deletes an element from an intarray, and it keeps its order. (Bad complexity) |
+|[ft_intarray_add()](https://github.com/ablaamim/Libft-Extended/blob/master/intarray/ft_intarray_add.c)| Add an element to an intarray. |
 
 ---
 
