@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:25:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/14 19:52:21 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/02/17 15:38:46 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ typedef struct s_intarray
 {
 	int	*data;
 	int	len;
-}	t_intarray;
+	int	alloc;
+}	*t_intarray;
 
-void		ft_intarray_delete(t_intarray *tab, int index);
-void		UNSORTED_intarray_delete(t_intarray *tab, int index);
+void		ft_intarray_add(t_intarray tab, int value);
+void		ft_intarray_delete(t_intarray tab, int index);
+void		UNSORTED_intarray_delete(t_intarray tab, int index);
 void		ft_intarray_sort(t_intarray tab);
 void		ft_intarray_debug(t_intarray tab);
 void		ft_putnbr(int n);

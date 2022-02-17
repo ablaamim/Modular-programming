@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 16:04:35 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/11 16:12:27 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:15:21 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 	i = 0;
 	average = 0;
-	while (i < tab.len)
+	while (i < tab->len)
 	{
-		average += tab.data[i];
+		average += tab->data[i];
 		i++;
 	}
-	average /= tab.len;
+	average /= tab->len;
 	return (average);
 }

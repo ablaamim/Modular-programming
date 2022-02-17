@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 15:28:38 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/07 15:42:46 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:20:24 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_intarray_len(t_intarray tab)
 {
-	return (tab.len);
+	return (tab->len);
 }

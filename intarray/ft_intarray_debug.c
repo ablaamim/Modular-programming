@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:21:59 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/01/16 09:14:56 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:19:58 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_intarray_debug(t_intarray tab)
 
 	i = 0;
 	write(1, "[", 1);
-	while (i < tab.len - 1)
+	while (i < tab->len - 1)
 	{
-		ft_putnbr(tab.data[i]);
+		ft_putnbr(tab->data[i]);
 		write(1, " ", 1);
 		i++;
 	}
-	ft_putnbr(tab.data[tab.len - 1]);
+	ft_putnbr(tab->data[tab->len - 1]);
 	write(1, "]", 1);
 }

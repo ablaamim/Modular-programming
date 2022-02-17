@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 15:08:10 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/07 15:13:55 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:14:04 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_intarray_set(t_intarray tab, int index, int value)
 {
-	tab.data[index] = value;
+	tab->data[index] = value;
 }

@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:43:31 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/11 16:10:47 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:19:27 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_intarray_destroy(t_intarray tab)
 {
-	free(tab.data);
+	free(tab->data);
+	free(tab);
 }
