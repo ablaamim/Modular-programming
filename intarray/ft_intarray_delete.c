@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 19:39:41 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/16 18:23:12 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/01 09:43:33 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_intarray_delete(t_intarray tab, int index)
 {
 	int	i;
 
-	if ((index < 0 ) || (index >= tab->len))
+	if ((index < 0) || (index >= tab->len))
 		write(2, "Error : invalid index\n", 22);
 	i = index + 1;
 	while (i < tab->len)

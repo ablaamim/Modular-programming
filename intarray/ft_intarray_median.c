@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 16:14:36 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/16 18:20:46 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/01 09:43:52 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 float	ft_intarray_median(t_intarray tab)
 {
-	int	i;
+	int		i;
 	float	median;
-	int	len;
+	int		len;
 
 	i = 0;
 	median = 0;
