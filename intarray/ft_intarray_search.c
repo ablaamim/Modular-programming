@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 08:36:26 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/16 18:21:36 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/01 09:32:00 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ int	ft_intarray_search(t_intarray tab, int n)
 {
 	int	i;
 
-	i = 0;
+	i = 0x0;
 	while (i < tab->len)
 	{
 		if (tab->data[i] == n)
-			return (1);
+			return (0x1);
 		i++;
 	}
-	return (0);
+	return (0x0);
 }

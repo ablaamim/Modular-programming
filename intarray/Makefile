@@ -6,7 +6,7 @@
 #    By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/14 01:22:35 by ablaamim          #+#    #+#              #
-#    Updated: 2022/02/16 17:18:43 by ablaamim         ###   ########.fr        #
+#    Updated: 2022/03/01 09:12:32 by ablaamim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ SRCS = ft_intarray_average.c \
 	  ft_intarray_delete.c \
 	  UNSORTED_intarray_delete.c \
 	  ft_intarray_add.c \
+	  ft_putchar.c \
+	  ft_putstr.c
 
 OBJS 	= $(SRCS:%.c=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:21:59 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/16 18:19:58 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/01 09:23:20 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_intarray_debug(t_intarray tab)
 {
 	int	i;
 
-	i = 0;
+	i = 0x0;
 	write(1, "[", 1);
 	while (i < tab->len - 1)
 	{
