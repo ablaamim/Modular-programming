@@ -35,11 +35,11 @@ typedef struct s_intarray
 
 > Header file :
 
-```c
-[modules.h]()
-```
+ [modules.h](https://github.com/ablaamim/Libft_extended/blob/master/modules/modules.h)
 
-> [Makefile]()
+> Compilation script :
+
+ [Makefile](https://github.com/ablaamim/Libft_extended/blob/master/modules/Makefile)
 
 |Function | Description |
 |---      |--- |
