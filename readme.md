@@ -68,8 +68,8 @@ typedef struct s_intarray
 
 | Functiontion | Description |
 |--- |--- |
-| ft_atoi()[] | Converts ascii to integers. |
-| ft_putchar()[] | Writes a character on stdout using write system call |
-| ft_putstr()[] | Writes a string character by character on stdout using system call write |
+| [ft_atoi()]() | Converts ascii to integers. |
+| [ft_putchar()]() | Writes a character on stdout using write system call |
+| [ft_putstr()]() | Writes a string character by character on stdout using system call write |
 
 ---
