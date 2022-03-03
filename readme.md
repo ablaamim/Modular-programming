@@ -20,6 +20,8 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 
 ## MODULE 1 : Useful function to manipulate tables of integers :
 
+---
+
 > ABSOLUFUCKINLUTELY :heavy_exclamation_mark:
 
 ### :information_source: Extending my libft with more util function!
@@ -40,6 +42,10 @@ typedef struct s_intarray
 > Compilation script :
 
  [Makefile](https://github.com/ablaamim/Libft_extended/blob/master/modules/Makefile)
+
+---
+
+## Content :
 
 |Function | Description |
 |---      |--- |
@@ -65,6 +71,10 @@ typedef struct s_intarray
 ---
 
 ## Module 2 : Useful tools :
+
+---
+
+## Content :
 
 | Functiontion | Description |
 |--- |--- |
