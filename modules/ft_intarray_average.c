@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_nb_occurences.c                        :+:      :+:    :+:   */
+/*   ft_intarray_average.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 08:48:54 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/16 18:21:04 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/11 16:04:35 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:03:15 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include"modules.h"
 
-int	ft_intarray_nb_occurences(t_intarray tab, int n)
+int	ft_intarray_average(t_intarray tab)
 {
 	int	i;
-	int	occ;
+	int	average;
 
 	i = 0;
-	occ = 0;
+	average = 0;
 	while (i < tab->len)
 	{
-		if (tab->data[i] == n)
-			occ += 1;
+		average += tab->data[i];
 		i++;
 	}
-	return (occ);
+	average /= tab->len;
+	return (average);
 }

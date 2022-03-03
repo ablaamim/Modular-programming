@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_add.c                                  :+:      :+:    :+:   */
+/*   ft_intarray_concat.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 20:25:47 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/01 09:37:52 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/07 15:51:30 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:04:12 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-void	ft_intarray_add(t_intarray tab, int value)
+t_intarray	ft_intarray_concat(t_intarray t1, t_intarray t2)
 {
-	if (tab->len >= tab->alloc)
+	int			i;
+	int			j;
+	t_intarray	t3;
+
+	t3 = ft_intarray_create(ft_intarray_len(t1) + ft_intarray_len(t2));
+	i = 0;
+	while (i < t1->len)
 	{
-		write(2, "Error : Not enough space allocated\n", 35);
-		return ;
+		t3->data[i] = t1->data[i];
+		i++;
 	}
-	tab->data[tab->len] = value;
-	tab->len++;
+	j = i;
+	while (j < t2->len)
+	{
+		t3->data[j] = t2->data[j];
+		j++;
+	}
+	return (t3);
 }

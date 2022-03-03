@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_sort.c                                 :+:      :+:    :+:   */
+/*   ft_intarray_set.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 14:47:14 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/16 18:10:29 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/07 15:08:10 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:07:13 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-void	ft_intarray_sort(t_intarray tab)
+void	ft_intarray_set(t_intarray tab, int index, int value)
 {
-	int	i;
-	int	j;
-	int	tmp;
-
-	i = 0;
-	while (i < tab->len)
+	if (index < 0x0 || index >= tab->len)
 	{
-		j = i + 1;
-		while (j < tab->len)
-		{
-			if (tab->data[i] > tab->data[j])
-			{
-				tmp = tab->data[i];
-				tab->data[i] = tab->data[j];
-				tab->data[j] = tmp;
-			}
-			j++;
-		}
-		i++;
+		ft_putstr("Please set a valid index.");
+		return ;
 	}
+	tab->data[index] = value;
 }

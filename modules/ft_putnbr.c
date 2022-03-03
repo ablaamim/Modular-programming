@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_median.c                               :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 16:14:36 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/01 09:43:52 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/01/16 07:26:46 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:08:44 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"intarray.h"
+#include "modules.h"
 
-float	ft_intarray_median(t_intarray tab)
+void	ft_putnbr(int n)
 {
-	int		i;
-	float	median;
-	int		len;
+	long	nb;
 
-	i = 0;
-	median = 0;
-	ft_intarray_sort(tab);
-	len = ft_intarray_len(tab);
-	if (len % 2 == 1)
-		median = tab->data[len / 2];
-	else
-		median = tab->data[len / 2] + tab->data[(len / 2) - 1];
-	return (median / 2);
+	nb = (long) n;
+	if (nb < 0x0)
+	{
+		nb = -nb;
+		write(0x1, "-", 0x1);
+	}
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	write(0x1, &"0123456789"[nb % 10], 0x1);
 }

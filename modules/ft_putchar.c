@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_clone.c                                :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 01:54:04 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/01 09:39:09 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/03/01 09:11:06 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:08:03 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-t_intarray	ft_intarray_clone(t_intarray tab)
+void	ft_putchar(char c)
 {
-	t_intarray	copy;
-	int			i;
-
-	i = 0;
-	copy = ft_intarray_create(tab->len);
-	while (i < tab->len)
-	{
-		copy->data[i] = tab->data[i];
-		i++;
-	}
-	return (copy);
+	write(1, &c, 1);
 }

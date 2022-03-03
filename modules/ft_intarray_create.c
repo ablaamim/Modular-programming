@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_sum.c                                  :+:      :+:    :+:   */
+/*   ft_intarray_create.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 15:56:42 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/01 09:44:12 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/01/16 09:08:15 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:04:24 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"intarray.h"
+#include "modules.h"
 
-int	ft_intarray_sum(t_intarray tab)
+t_intarray	ft_intarray_create(int len)
 {
-	int	i;
-	int	sum;
+	t_intarray	tab;
+	int			i;
 
-	i = 0;
-	sum = 0;
-	while (i < tab->len)
+	i = 0x0;
+	tab = malloc (sizeof(t_intarray));
+	tab->len = len;
+	tab->data = malloc (sizeof(int) * len);
+	while (i < len)
 	{
-		sum += tab->data[i];
+		tab->data[i] = 0x0;
 		i++;
 	}
-	return (sum);
+	return (tab);
 }

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_average.c                              :+:      :+:    :+:   */
+/*   ft_intarray_sum.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 16:04:35 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/01 09:38:17 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/11 15:56:42 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:07:44 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"intarray.h"
+#include"modules.h"
 
-int	ft_intarray_average(t_intarray tab)
+int	ft_intarray_sum(t_intarray tab)
 {
 	int	i;
-	int	average;
+	int	sum;
 
 	i = 0;
-	average = 0;
+	sum = 0;
 	while (i < tab->len)
 	{
-		average += tab->data[i];
+		sum += tab->data[i];
 		i++;
 	}
-	average /= tab->len;
-	return (average);
+	return (sum);
 }

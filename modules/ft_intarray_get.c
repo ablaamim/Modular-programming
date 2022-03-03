@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_print_positive_values.c                :+:      :+:    :+:   */
+/*   ft_intarray_get.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 08:28:00 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/03 11:24:19 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/07 15:23:06 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:05:37 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-void	ft_intarray_print_positive_values(t_intarray tab)
+int	ft_intarray_get(t_intarray tab, int index)
 {
-	int	i;
-
-	i = 0x0;
-	while (i < tab->len)
+	if (index < 0x0 || index >= tab->len)
 	{
-		if (tab->data[i] >= 0)
-		{
-			ft_putnbr(tab->data[i]);
-			if (i == tab->len - 1)
-				return ;
-			ft_putstr(", ");
-		}
-		i++;
+		ft_putstr("Please enter a valid index : ");
+		return(-1);
 	}
+	return (tab->data[index]);
 }

@@ -6,12 +6,12 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:25:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/03 12:35:45 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/03 13:01:42 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTARRAY_H
-# define INTARRAY_H
+#ifndef MODULES_H
+# define MODULES_H
 
 # include <unistd.h>
 # include <stdlib.h>

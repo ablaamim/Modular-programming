@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_intarray_sort.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 07:26:46 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/03 12:57:38 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/07 14:47:14 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:07:29 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-void	ft_putnbr(int n)
+void	ft_intarray_sort(t_intarray tab)
 {
-	long	nb;
+	int	i;
+	int	j;
+	int	tmp;
 
-	nb = (long) n;
-	if (nb < 0x0)
+	i = 0;
+	while (i < tab->len)
 	{
-		nb = -nb;
-		write(0x1, "-", 0x1);
+		j = i + 1;
+		while (j < tab->len)
+		{
+			if (tab->data[i] > tab->data[j])
+			{
+				tmp = tab->data[i];
+				tab->data[i] = tab->data[j];
+				tab->data[j] = tmp;
+			}
+			j++;
+		}
+		i++;
 	}
-	if (nb > 9)
-		ft_putnbr(nb / 10);
-	write(0x1, &"0123456789"[nb % 10], 0x1);
 }

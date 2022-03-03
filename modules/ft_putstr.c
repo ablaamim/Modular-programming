@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_slow_delete.c                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 19:29:16 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/01 09:44:55 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/03/01 09:10:18 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:08:19 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-void	unsorted_ft_intarray_delete(t_intarray tab, int index)
+void	ft_putstr(char *str)
 {
-	if (index != tab->len - 1)
-	{
-		tab->data[index] = tab->data[tab->len - 1];
-	}
-	tab->len--;
+	while (*str)
+		ft_putchar(*str++);
 }

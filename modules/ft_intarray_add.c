@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_destroy.c                              :+:      :+:    :+:   */
+/*   ft_intarray_add.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 15:43:31 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/02/16 18:19:27 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/14 20:25:47 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:02:59 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-void	ft_intarray_destroy(t_intarray tab)
+void	ft_intarray_add(t_intarray tab, int value)
 {
-	free(tab->data);
-	free(tab);
+	if (tab->len >= tab->alloc)
+	{
+		write(2, "Error : Not enough space allocated\n", 35);
+		return ;
+	}
+	tab->data[tab->len] = value;
+	tab->len++;
 }

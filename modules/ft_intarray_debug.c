@@ -6,11 +6,11 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:21:59 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/03 12:56:46 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/03 13:04:40 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
 void	ft_intarray_debug(t_intarray tab)
 {

@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_concat.c                               :+:      :+:    :+:   */
+/*   ft_intarray_search.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 15:51:30 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/01 09:41:40 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/01/16 08:36:26 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:06:59 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-t_intarray	ft_intarray_concat(t_intarray t1, t_intarray t2)
+int	ft_intarray_search(t_intarray tab, int n)
 {
-	int			i;
-	int			j;
-	t_intarray	t3;
+	int	i;
 
-	t3 = ft_intarray_create(ft_intarray_len(t1) + ft_intarray_len(t2));
-	i = 0;
-	while (i < t1->len)
+	i = 0x0;
+	while (i < tab->len)
 	{
-		t3->data[i] = t1->data[i];
+		if (tab->data[i] == n)
+			return (0x1);
 		i++;
 	}
-	j = i;
-	while (j < t2->len)
-	{
-		t3->data[j] = t2->data[j];
-		j++;
-	}
-	return (t3);
+	return (0x0);
 }

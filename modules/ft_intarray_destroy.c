@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_set.c                                  :+:      :+:    :+:   */
+/*   ft_intarray_destroy.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 15:08:10 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/03 12:54:32 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/02/09 15:43:31 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/03 13:05:23 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "intarray.h"
+#include "modules.h"
 
-void	ft_intarray_set(t_intarray tab, int index, int value)
+void	ft_intarray_destroy(t_intarray tab)
 {
-	if (index < 0x0 || index >= tab->len)
-	{
-		ft_putstr("Please set a valid index.");
-		return ;
-	}
-	tab->data[index] = value;
+	free(tab->data);
+	free(tab);
 }
