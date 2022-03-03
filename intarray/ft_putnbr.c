@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:26:46 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/01/16 07:28:34 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/03 12:57:38 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	ft_putnbr(int n)
 	long	nb;
 
 	nb = (long) n;
-	if (nb < 0)
+	if (nb < 0x0)
 	{
 		nb = -nb;
-		write(1, "-", 1);
+		write(0x1, "-", 0x1);
 	}
 	if (nb > 9)
 		ft_putnbr(nb / 10);
-	write(1, &"0123456789"[nb % 10], 1);
+	write(0x1, &"0123456789"[nb % 10], 0x1);
 }
