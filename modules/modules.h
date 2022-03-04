@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:25:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/03 13:01:42 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/04 11:54:18 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,7 @@ float		ft_intarray_median(t_intarray tab);
 t_intarray	ft_intarray_clone(t_intarray tab);
 void		ft_putchar(char c);
 void		ft_putstr(char *str);
-
+int			ft_intarray_get_min(t_intarray tab);
+int			ft_intarray_get_index_of_min(t_intarray tab);
+int			ft_atoi(char *str);
 #endif

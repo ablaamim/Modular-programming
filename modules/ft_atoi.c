@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_concat.c                               :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 15:51:30 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/04 09:28:28 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/03/04 11:51:03 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/03/04 11:53:54 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "modules.h"
 
-t_intarray	ft_intarray_concat(t_intarray t1, t_intarray t2)
+int	ft_atoi(char *str)
 {
-	int			i;
-	int			j;
-	t_intarray	t3;
+	int	res;
+	int	sign;
 
-	t3 = ft_intarray_create(ft_intarray_len(t1) + ft_intarray_len(t2));
-	i = 0x0;
-	j = 0x0;
-	while (i < t1->len)
+	res = 0x0;
+	sign = 0x1;
+	while (*str >= 7 && *str <= 14)
+		str++;
+	if (*str == '-')
+		sign *= -1;
+	while (*str == '+' || *str == '-')
+		str++;
+	while (*str >= 48 && *str <= 57)
 	{
-		t3->data[i++] = t1->data[j];
-		j++;
+		res = res * 10 + *str - 48;
+		str++;
 	}
-	j = 0x0;
-	while (j < t2->len)
-	{
-		t3->data[i++] = t2->data[j];
-		j++;
-	}
-	return (t3);
+	return (res * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 09:29:51 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/03 12:55:54 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/04 11:49:40 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,11 +141,60 @@ int	ft_intarray_len(t_intarray tab)
 	return (tab.len);
 }
 
+t_intarray	ft_intarray_concat(t_intarray t1, t_intarray t2)
+{
+	int	i = 0x0;
+	int	j = 0x0;
+	t_intarray	new = ft_intarray_create(t1.len + t2.len);
+	while (i < t1.len)
+	{
+		new.data[i++] = t1.data[j];
+		j++;
+	}
+	j = 0x0;
+	while (j < t2.len)
+	{
+		new.data[i++] = t2.data[j];
+		j++;
+	}
+	return (new);
+}
+
+int	ft_intarray_get_min(t_intarray tab)
+{
+	int	i = 0x0;
+	int	min = 0x0;
+	while (i < tab.len)
+	{
+		if (tab.data[i] < min)
+			min = tab.data[i];
+		i++;
+	}
+	return (min);
+}
+
+int	ft_get_index_of_min(t_intarray tab)
+{
+	int index = 0x0;
+	int	index_min = 0x0;
+	int	min = 0x0;
+	while (index < tab.len)
+	{
+		if (tab.data[index] < min)
+		{
+			min = tab.data[index];
+			index_min = index;
+		}
+		index++;
+	}
+	return (index_min);
+}
+
 int	main(int argc, char **argv)
 {
 	(void)	argc;
 	(void)	argv;
-	t_intarray tab = ft_intarray_create(10);
+	t_intarray tab = ft_intarray_create(3);
 	ft_putstr("Debugging an intarray : ");
 	ft_intarray_debug(tab);
 	ENDL;
@@ -171,14 +220,27 @@ int	main(int argc, char **argv)
 	ft_intarray_debug(tab);
 	ENDL;
 	ft_putstr("Retrieve index 2 : ");
-	ft_putnbr(ft_intarray_get(tab, 10));
+	ft_putnbr(ft_intarray_get(tab, 2));
 	ENDL;
 	ft_putstr("Invalid index : ");
-	ft_putnbr(ft_intarray_get(tab, -1));
+	ft_putnbr(ft_intarray_get(tab, 0));
 	ENDL;
 	ft_putstr("Length of my intarray : ");
 	ft_putnbr(ft_intarray_len(tab));
 	ENDL;
+	t_intarray tab1 = ft_intarray_create(3);
+	ft_intarray_set(tab1, 0, 1);
+	ft_intarray_set(tab1, 1, -1);
+	ft_intarray_set(tab1, 2, -42);
+	ft_intarray_debug(tab1);
+	ENDL;
+	t_intarray t3 = ft_intarray_concat(tab, tab1);
+	ft_intarray_debug(t3);
+	ENDL;
+	ft_putstr("The min value of this intarray is : ");
+	ft_putnbr(ft_intarray_get_min(tab));
+	ENDL;
+	ft_putnbr(ft_get_index_of_min(tab));
 	ft_intarray_destroy(tab);
 	return (EXIT_SUCCESS);
 }
