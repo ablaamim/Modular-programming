@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 09:29:51 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/04 11:49:40 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/09 19:09:55 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,6 +190,28 @@ int	ft_get_index_of_min(t_intarray tab)
 	return (index_min);
 }
 
+void	ft_intarray_sort(t_intarray tab)
+{
+	int	i = 0x0;
+	int	j = 0x0;
+	int	tmp;
+	while (i < tab.len)
+	{
+		j = i + 1;
+		while (j < tab.len)
+		{
+			if (tab.data[i] > tab.data[j])
+			{
+				tmp = tab.data[i];
+				tab.data[i] = tab.data[j];
+				tab.data[j] = tmp;
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	(void)	argc;
@@ -242,5 +264,22 @@ int	main(int argc, char **argv)
 	ENDL;
 	ft_putnbr(ft_get_index_of_min(tab));
 	ft_intarray_destroy(tab);
+	ENDL;
+	t_intarray	arr = ft_intarray_create(8);
+	ft_putstr("Unsorted tab : ");
+	ft_intarray_set(arr, 0, 42);
+	ft_intarray_set(arr, 1, -42);
+	ft_intarray_set(arr, 2, 1337);
+	ft_intarray_set(arr, 3, 0);
+	ft_intarray_set(arr, 4, 101);
+	ft_intarray_set(arr, 5, 69);
+	ft_intarray_set(arr, 6, -69);
+	ft_intarray_set(arr, 7, -1337);
+	ft_intarray_debug(arr);
+	ENDL;
+	ft_intarray_sort(arr);
+	ft_putstr("Sorted tab : ");
+	ft_intarray_debug(arr);
+	ENDL;
 	return (EXIT_SUCCESS);
 }
