@@ -6,7 +6,7 @@
 #    By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/14 01:22:35 by ablaamim          #+#    #+#              #
-#    Updated: 2022/03/09 18:52:46 by ablaamim         ###   ########.fr        #
+#    Updated: 2022/03/11 21:16:42 by ablaamim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 # Create a Makefile responsible of compiling our lib
@@ -38,7 +38,8 @@ SRCS = ft_intarray_average.c \
 	  ft_putchar.c \
 	  ft_putstr.c \
 	  ft_intarray_get_min.c \
-	  ft_intarray_get_index_of_min.c
+	  ft_intarray_get_index_of_min.c \
+	  ft_empty_intarray_create.c \
 # 	* create our executable file
 # 	* replace all files with .c extension to .o extension
 OBJS 	= $(SRCS:%.c=%.o)
