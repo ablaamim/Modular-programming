@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 09:29:51 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/09 19:09:55 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:42:15 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ typedef struct s_intarray
 {
 	int	*data;
 	int	len;
-}	t_intarray;
+	int	alloc;
+}	*t_intarray;
 
 void	ft_putchar(char c){write(1, &c, 1);}
 void	ft_putstr(char *str)
@@ -44,16 +45,15 @@ void	ft_intarray_print_positive_values(t_intarray tab)
 
 	i = 0x0;
 	ft_putchar('[');
-	while (i < tab.len - 1)
+	while (i < tab->len - 1)
 	{
-		if (tab.data[i] >= 0x0)
+		if (tab->data[i] >= 0x0)
 		{
-			ft_putnbr(tab.data[i]);
-			ft_putstr(", ");
+			ft_putnbr(tab->data[i]);
 		}
 		i++;
 	}
-	ft_putnbr(tab.data[tab.len - 0x1]);
+	ft_putnbr(tab->data[tab->len - 0x1]);
 	ft_putchar(']');
 }
 
@@ -62,22 +62,22 @@ void	ft_intarray_debug(t_intarray tab)
 	int	i = 0x0;
 
 	ft_putchar('[');
-	while (i < tab.len - 0x1)
+	while (i < tab->len - 0x1)
 	{
-		ft_putnbr(tab.data[i]);
+		ft_putnbr(tab->data[i]);
 		ft_putstr(", ");
 		i++;
 	}
-	ft_putnbr(tab.data[tab.len - 0x1]);
+	ft_putnbr(tab->data[tab->len - 0x1]);
 	ft_putchar(']');
 }
 
 int	ft_intarray_search(t_intarray tab, int n)
 {
 	int	j = 0x0;
-	while (j < tab.len)
+	while (j < tab->len)
 	{
-		if (tab.data[j] == n)
+		if (tab->data[j] == n)
 			return (0x1);
 		j++;
 	}
@@ -88,9 +88,9 @@ int	ft_intarray_nb_occurences(t_intarray tab, int value)
 {
 	int	i = 0x0;
 	int	occurences = 0x0;
-	while (i < tab.len)
+	while (i < tab->len)
 	{
-		if (tab.data[i] == value)
+		if (tab->data[i] == value)
 			occurences++;
 		i++;
 	}
@@ -100,12 +100,13 @@ int	ft_intarray_nb_occurences(t_intarray tab, int value)
 t_intarray	ft_intarray_create(int len)
 {
 	int	i = 0x0;
-	t_intarray create;
-	create.len = len;
-	create.data = malloc (sizeof(int) * len);
+	t_intarray create = malloc (sizeof(t_intarray));
+	create->len = len;
+	create->alloc = len;
+	create->data = malloc (sizeof(int) * len);
 	while (i < len)
 	{
-		create.data[i] = 0x0;
+		create->data[i] = 0x0;
 		i++;
 	}
 	return (create);
@@ -113,48 +114,49 @@ t_intarray	ft_intarray_create(int len)
 
 int	ft_intarray_get(t_intarray tab, int index)
 {
-	if (index < 0x0 || index >= tab.len)
+	if (index < 0x0 || index >= tab->len)
 	{
 		ft_putstr("Please set a valid index : ");
 		return (-1);
 	}
-	return (tab.data[index]);
+	return (tab->data[index]);
 }
 
 void	ft_intarray_set(t_intarray tab, int index, int value)
 {
-	if (index < 0x0 || index >= tab.len)
+	if (index < 0x0 || index >= tab->len)
 	{
 		ft_putstr("Please set a valid index");
 		return ;
 	}
-	tab.data[index] = value;
+	tab->data[index] = value;
 }
 
 void	ft_intarray_destroy(t_intarray tab)
 {
-	free(tab.data);
+	free(tab->data);
+	free(tab);
 }
 
 int	ft_intarray_len(t_intarray tab)
 {
-	return (tab.len);
+	return (tab->len);
 }
 
 t_intarray	ft_intarray_concat(t_intarray t1, t_intarray t2)
 {
 	int	i = 0x0;
 	int	j = 0x0;
-	t_intarray	new = ft_intarray_create(t1.len + t2.len);
-	while (i < t1.len)
+	t_intarray	new = ft_intarray_create(t1->len + t2->len);
+	while (i < t1->len)
 	{
-		new.data[i++] = t1.data[j];
+		new->data[i++] = t1->data[j];
 		j++;
 	}
 	j = 0x0;
-	while (j < t2.len)
+	while (j < t2->len)
 	{
-		new.data[i++] = t2.data[j];
+		new->data[i++] = t2->data[j];
 		j++;
 	}
 	return (new);
@@ -164,10 +166,10 @@ int	ft_intarray_get_min(t_intarray tab)
 {
 	int	i = 0x0;
 	int	min = 0x0;
-	while (i < tab.len)
+	while (i < tab->len)
 	{
-		if (tab.data[i] < min)
-			min = tab.data[i];
+		if (tab->data[i] < min)
+			min = tab->data[i];
 		i++;
 	}
 	return (min);
@@ -178,11 +180,11 @@ int	ft_get_index_of_min(t_intarray tab)
 	int index = 0x0;
 	int	index_min = 0x0;
 	int	min = 0x0;
-	while (index < tab.len)
+	while (index < tab->len)
 	{
-		if (tab.data[index] < min)
+		if (tab->data[index] < min)
 		{
-			min = tab.data[index];
+			min = tab->data[index];
 			index_min = index;
 		}
 		index++;
@@ -195,21 +197,48 @@ void	ft_intarray_sort(t_intarray tab)
 	int	i = 0x0;
 	int	j = 0x0;
 	int	tmp;
-	while (i < tab.len)
+	while (i < tab->len)
 	{
 		j = i + 1;
-		while (j < tab.len)
+		while (j < tab->len)
 		{
-			if (tab.data[i] > tab.data[j])
+			if (tab->data[i] > tab->data[j])
 			{
-				tmp = tab.data[i];
-				tab.data[i] = tab.data[j];
-				tab.data[j] = tmp;
+				tmp = tab->data[i];
+				tab->data[i] = tab->data[j];
+				tab->data[j] = tmp;
 			}
 			j++;
 		}
 		i++;
 	}
+}
+
+void	unsorted_intarray_delete(t_intarray tab, int index)
+{
+	tab->data[index] = tab->data[tab->len - 1];
+	tab->len--;
+}
+
+void	ft_intarray_delete(t_intarray tab, int index)
+{
+	int	i;
+
+	i = index + 1;
+	while (i < tab->len)
+	{
+		tab->data[i - 1] = tab->data[i];
+		i++;
+	}
+	tab->len--;
+}
+
+void	ft_intarray_add(t_intarray tab, int value)
+{
+	if (tab->len >= tab->alloc)
+		return ;
+	tab->data[tab->len] = value;
+	tab->len++;
 }
 
 int	main(int argc, char **argv)
@@ -280,6 +309,19 @@ int	main(int argc, char **argv)
 	ft_intarray_sort(arr);
 	ft_putstr("Sorted tab : ");
 	ft_intarray_debug(arr);
+	ENDL;
+	t_intarray array = ft_intarray_create(3);
+	ft_intarray_set(array, 0, 1337);
+	ft_intarray_set(array, 1, 42);
+	ft_intarray_set(array, 2, -42);
+	ft_putstr("Unsorted delete : ");
+	//ft_intarray_debug(array);
+	ft_intarray_delete(array, 0);
+	ft_intarray_debug(array);
+	ENDL;
+	t_intarray add = ft_intarray_create(3);
+	ft_intarray_add(add, 42);
+	ft_intarray_debug(add);
 	ENDL;
 	return (EXIT_SUCCESS);
 }

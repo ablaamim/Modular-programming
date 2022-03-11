@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 07:25:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/03/04 11:54:18 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:47:10 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
+# define ENDL write(1, "\n", 1);
 typedef struct s_intarray
 {
 	int	*data;
@@ -23,6 +23,7 @@ typedef struct s_intarray
 	int	alloc;
 }	*t_intarray;
 
+t_intarray	ft_empty_intarray_create(int alloc);
 void		ft_intarray_add(t_intarray tab, int value);
 void		ft_intarray_delete(t_intarray tab, int index);
 void		unsorted_intarray_delete(t_intarray tab, int index);
