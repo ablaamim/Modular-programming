@@ -6,7 +6,7 @@
 #    By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/03 16:37:01 by ablaamim          #+#    #+#              #
-#    Updated: 2022/04/03 16:54:42 by ablaamim         ###   ########.fr        #
+#    Updated: 2022/04/03 17:04:03 by ablaamim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRCS = ./modules/ft_intarray_create.c \
 		  ./modules/ft_putnbr.c \
 		  ./modules/ft_intarray_print_positive_values.c \
 		  ./modules/ft_intarray_search.c \
-		  ./modules/ft_intarray_nb_occurences.c
+		  ./modules/ft_intarray_nb_occurences.c \
+		  ./modules/ft_intarray_destroy.c
 # 	* create our executable file
 # 	* replace all files with .c extension to .o extension
 OBJS 	= $(SRCS:%.c=%.o)

@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:52:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/03 16:52:01 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/03 17:04:56 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ t_intarray	ft_intarray_create(int len);
 void	ft_intarray_print_positive_values(t_intarray tab);
 int		ft_intarray_search(t_intarray tab, int n);
 int		ft_intarray_nb_occurences(t_intarray tab, int n);
+void	ft_intarray_destroy(t_intarray tab);
 
 #endif
