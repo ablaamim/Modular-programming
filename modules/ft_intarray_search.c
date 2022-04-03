@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_intarray_search.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 16:18:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/03 16:57:28 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/03 16:47:20 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/03 16:50:00 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-int	main(void)
+int	ft_intarray_search(t_intarray tab, int n)
 {
-	t_intarray tab;
+	int	i;
 
-	tab = ft_intarray_create(4);
-	ft_intarray_debug(tab);
-	ENDL;
-	ft_intarray_print_positive_values(tab);
-	ENDL;
-	ft_putnbr(ft_intarray_search(tab, 0));
-	ENDL;
-	ft_putnbr(ft_intarray_nb_occurences(tab, 0));
-	ENDL;
-	return (EXIT_SUCCESS);
+	i = 0x0;
+	while (i < tab.len)
+	{
+		if (tab.data[i] == n)
+			return (1);
+		i++;
+	}
+	return (0);
 }

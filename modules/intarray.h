@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:52:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/01 16:19:40 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/03 16:52:01 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ typedef struct s_intarray
 void	ft_intarray_debug(t_intarray tab);
 void	ft_putnbr(int nb);
 t_intarray	ft_intarray_create(int len);
+void	ft_intarray_print_positive_values(t_intarray tab);
+int		ft_intarray_search(t_intarray tab, int n);
+int		ft_intarray_nb_occurences(t_intarray tab, int n);
 
 #endif
