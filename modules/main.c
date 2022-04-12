@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 16:18:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 17:03:27 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/12 17:09:59 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	main(void)
 	ft_intarray_set(tab, 4, -42);
 	ft_intarray_set(tab, 5, -42);
 	ft_intarray_debug(tab);
+	ENDL;
+	ft_putnbr(ft_intarray_get(tab, 2));
 	ENDL;
 	ft_intarray_print_positive_values(tab);
 	ENDL;
