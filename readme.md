@@ -37,11 +37,11 @@ typedef struct s_intarray
 
 > Header file :
 
- [modules.h](https://github.com/ablaamim/Libft_extended/blob/master/modules/modules.h)
+ [modules.h](https://github.com/ablaamim/Libft_extended/blob/master/modules/intarray.h)
 
 > Compilation script :
 
- [Makefile](https://github.com/ablaamim/Libft_extended/blob/master/modules/Makefile)
+ [Makefile](https://github.com/ablaamim/Libft_extended/blob/master/Makefile)
 
 ---
 
