@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_create.c                               :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 16:15:56 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 16:45:27 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/12 16:55:06 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/12 16:56:07 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-t_intarray	ft_intarray_create(int len)
+void	ft_putchar(char c)
 {
-	t_intarray	tab;
-	int			i;
-
-	i = 0x0;
-	tab.len = len;
-	tab.data = malloc (sizeof(int) * len);
-	while (i < len)
-	{
-		tab.data[i] = 0x0;
-		i++;
-	}
-	return (tab);
+	write(1, &c, 1);
 }

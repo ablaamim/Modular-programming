@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_create.c                               :+:      :+:    :+:   */
+/*   ft_intarray_get.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 16:15:56 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 16:45:27 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/12 16:46:00 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/12 16:47:46 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-t_intarray	ft_intarray_create(int len)
+int	ft_intarray_get(t_intarray tab, int index)
 {
-	t_intarray	tab;
-	int			i;
-
-	i = 0x0;
-	tab.len = len;
-	tab.data = malloc (sizeof(int) * len);
-	while (i < len)
-	{
-		tab.data[i] = 0x0;
-		i++;
-	}
-	return (tab);
+	return (tab.data[index]);
 }

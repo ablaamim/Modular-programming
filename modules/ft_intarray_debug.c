@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:51:42 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/01 16:13:52 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/12 16:57:08 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_intarray_debug(t_intarray tab)
 	while (i < tab.len)
 	{
 		ft_putnbr(tab.data[i]);
+		ft_putchar(' ');
 		i++;
 	}
 }

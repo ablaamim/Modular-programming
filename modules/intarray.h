@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:52:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/03 17:04:56 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/12 17:03:40 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,16 @@ typedef struct s_intarray
 	int	len;
 }	t_intarray;
 
-void	ft_intarray_debug(t_intarray tab);
-void	ft_putnbr(int nb);
+void		ft_putchar(char c);
+void		ft_intarray_debug(t_intarray tab);
+void		ft_putnbr(int nb);
 t_intarray	ft_intarray_create(int len);
-void	ft_intarray_print_positive_values(t_intarray tab);
-int		ft_intarray_search(t_intarray tab, int n);
-int		ft_intarray_nb_occurences(t_intarray tab, int n);
-void	ft_intarray_destroy(t_intarray tab);
+void		ft_intarray_print_positive_values(t_intarray tab);
+int			ft_intarray_search(t_intarray tab, int n);
+int			ft_intarray_nb_occurences(t_intarray tab, int n);
+void		ft_intarray_destroy(t_intarray tab);
+int			ft_intarray_get(t_intarray tab, int index);
+void		ft_intarray_set(t_intarray tab, int index, int value);
+int			ft_intarray_length(t_intarray tab);
 
 #endif

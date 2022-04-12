@@ -32,7 +32,7 @@ typedef struct s_intarray
 {
 	int	*tab;
 	int	len;
-} *t_intarray;
+} t_intarray;
 ```
 
 > Header file :
