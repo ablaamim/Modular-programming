@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_create.c                               :+:      :+:    :+:   */
+/*   ft_intarray_selection_sort.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 16:15:56 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 20:54:33 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/12 20:35:42 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/12 20:57:06 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-t_intarray	ft_intarray_create(int len)
+void	ft_intarray_selection_sort(t_intarray tab)
 {
-	t_intarray	tab;
-	int			i;
+	int	i;
+	int	j;
+	int	tmp;
 
 	i = 0x0;
-	tab.len = len;
-	tab.data = malloc (sizeof(int) * len);
 	while (i < tab.len)
 	{
-		tab.data[i] = 0x0;
+		j = i + 1;
+		while (j < tab.len)
+		{
+			if (tab.data[i] > tab.data[j])
+			{
+				tmp = tab.data[i];
+				tab.data[i] = tab.data[j];
+				tab.data[j] = tmp;
+			}
+			j++;
+		}
 		i++;
 	}
-	return (tab);
 }

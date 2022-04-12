@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_create.c                               :+:      :+:    :+:   */
+/*   ft_intarray_concat.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 16:15:56 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 20:54:33 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/12 19:12:27 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/12 19:29:49 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-t_intarray	ft_intarray_create(int len)
+t_intarray	ft_intarray_concat(t_intarray t1, t_intarray t2)
 {
-	t_intarray	tab;
+	t_intarray	t3;
 	int			i;
+	int			j;
 
+	t3 = ft_intarray_create(ft_intarray_length(t1) + ft_intarray_length(t2));
+	if (!t3.data)
+		exit (EXIT_FAILURE);
 	i = 0x0;
-	tab.len = len;
-	tab.data = malloc (sizeof(int) * len);
-	while (i < tab.len)
+	j = 0x0;
+	while (i < t1.len)
 	{
-		tab.data[i] = 0x0;
+		t3.data[j++] = t1.data[i];
 		i++;
 	}
-	return (tab);
+	i = 0x0;
+	while (i < t2.len)
+	{
+		t3.data[j++] = t2.data[i];
+		i++;
+	}
+	return (t3);
 }
