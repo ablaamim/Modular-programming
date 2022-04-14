@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:52:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/14 20:37:52 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/14 20:45:42 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int			ft_intarray_sum(t_intarray tab);
 float		ft_intarray_average(t_intarray tab);
 float		ft_intarray_median(t_intarray tab);
 void		ft_intarray_selection_sort(t_intarray tab);
+t_intarray	ft_intarray_clone(t_intarray tab);
 
 #endif

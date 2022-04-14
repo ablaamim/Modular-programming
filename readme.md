@@ -57,12 +57,12 @@ typedef struct s_intarray
 | [ft_intarray_create()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_create.c) | Constructor module, it creates an array of size len initialized with zeros. |
 | [ft_intarray_set()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_set.c) | Assinging values in specific indexes. |
 | [ft_intarray_get()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_get.c) | Retrieves an element of an intarray by indexing. |
-| [ft_intarray_concat()]() | Concatenates two intarrays and returns a new one allocated by malloc(3). |
-| [ft_intarray_min()]() | Search for the min value althrough an intarray and returns it. |
-| [ft_intarray_max()]() | Search for the max value althrough an intarray and returns it. |
-| [ft_intarray_get_index_of_min()]() | Search for the min value althrough an intarray and returns its index. |
-| [ft_intarray_get_index_of_max()]() | Search for the max value althrough an intarray and returns its index. |
-| [ft_intarray_selection_sort()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_sort.c) | Sorting an array of integers using selection sort. |
+| [ft_intarray_concat()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_concat.c) | Concatenates two intarrays and returns a new one allocated by malloc(3). |
+| [ft_intarray_min()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_min.c) | Search for the min value althrough an intarray and returns it. |
+| [ft_intarray_max()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_max.c) | Search for the max value althrough an intarray and returns it. |
+| [ft_intarray_get_index_of_min()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_get_index_of_min.c) | Search for the min value althrough an intarray and returns its index. |
+| [ft_intarray_get_index_of_max()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_get_index_of_max.c) | Search for the max value althrough an intarray and returns its index. |
+| [ft_intarray_selection_sort()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_selection_sort.c) | Sorting an array of integers using selection sort. |
 | [ft_intarray_length()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_length.c) | Calculates the length of an intarray. |
 | [ft_intarray_destroy()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_destroy.c) | Free what was allocated. |
 | [ft_intarray_sum()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_sum.c) | Sums up an intarray. |
@@ -84,8 +84,8 @@ typedef struct s_intarray
 
 | Functiontion | Description |
 |--- |--- |
-| [ft_atoi()]() | Converts ascii to integers. |
-| [ft_putchar()]() | Writes a character on stdout using write system call |
-| [ft_putstr()]() | Writes a string character by character on stdout using system call write |
+| [ft_atoi()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_atoi.c) | Converts ascii to integers. |
+| [ft_putchar()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_putchar.c) | Writes a character on stdout using write system call |
+| [ft_putstr()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_putstr.c) | Writes a string character by character on stdout using system call write |
 
 ---
