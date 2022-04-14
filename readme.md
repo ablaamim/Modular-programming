@@ -49,7 +49,7 @@ typedef struct s_intarray
 
 |Function | Description |
 |---      |--- |
-| [ft_intarray_debug()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_debug.c) | Prints an array of integers in a form of a real array with "[ ]" on borders. |
+| [ft_intarray_debug()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_debug.c) | Prints the content of an array of integers.. |
 | [ft_putnbr()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_putnbr.c) | Prints numbers in the range of integer type, including INTMAX and INTMIN. |
 | [ft_intarray_print_positive_values()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_print_positive_values.c) | Traverse an array of integers and filters the positive values in order to print them. |
 | [ft_intarray_search()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_search.c)| Traverse an array of ints searching for a set "n", if it accures the function returns 1, otherwise it returns 0. |

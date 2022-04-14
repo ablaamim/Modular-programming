@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:52:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 20:33:37 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/14 19:56:18 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ int			ft_intarray_min(t_intarray tab);
 int			ft_intarray_max(t_intarray tab);
 int			ft_intarray_get_index_of_max(t_intarray tab);
 int			ft_intarray_get_index_of_min(t_intarray tab);
+int			ft_atoi(char *str);
+int			ft_intarray_sum(t_intarray tab);
 
 #endif

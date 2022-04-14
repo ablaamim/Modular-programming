@@ -1,43 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_get_index_of_max.c                     :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 20:21:27 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 20:26:24 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/14 19:44:58 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/14 19:51:21 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-int	ft_intarray_get_index_of_max(t_intarray tab)
+int	ft_atoi(char *str)
 {
-	int	i;
-	int	max;
-	int	index_max;
+	long	res;
+	int		sign;
 
-	i = 0x0;
-	max = tab.data[0];
-	while (i < tab.len)
+	res = 0x0;
+	sign = 0x1;
+	while (*str >= 7 && *str <= 14)
+		str++;
+	if (*str == '-')
+		sign *= -1;
+	while (*str == '+' || *str == '-')
+		str++;
+	while (*str >= 48 && *str <= 57)
 	{
-		if (tab.data[i] > max)
-		{
-			max = tab.data[i];
-			index_max = i;
-		}
-		i++;
+		res = res * 10 + *str - 48;
+		str++;
 	}
-	return (index_max);
-}
-
-int	main()
-{
-	t_intarray tab = ft_intarray_create(3);
-
-	ft_intarray_set(tab, 0, -42);
-	ft_intarray_set(tab, 1, 1337);
-	ft_intarray_set(tab, 2, 42);
-	return (EXIT_SUCCESS);
+	return (res * sign);
 }
