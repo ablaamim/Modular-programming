@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:52:25 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/14 23:29:52 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/14 23:53:48 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ t_intarray	ft_intarray_clone(t_intarray *tab);
 void		ft_unsorted_intarray_delete(t_intarray *tab, int index);
 void		ft_intarray_delete(t_intarray *tab, int index);
 void		ft_intarray_add(t_intarray *tab, int value);
+t_intarray	ft_empty_intarray_create(int alloc);
 
 #endif
