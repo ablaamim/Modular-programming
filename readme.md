@@ -31,6 +31,7 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 typedef struct s_intarray
 {
 	int	*tab;
+	int	alloc;
 	int	len;
 } t_intarray;
 ```
@@ -42,6 +43,10 @@ typedef struct s_intarray
 > Compilation script :
 
  [Makefile](https://github.com/ablaamim/Libft_extended/blob/master/Makefile)
+
+> Tests :
+
+ [main.c]()
 
 ---
 
@@ -69,7 +74,7 @@ typedef struct s_intarray
 | [ft_intarray_average()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_average.c)| Calculates the average of an intarray. |
 | [ft_intarray_median()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_median.c) | Calculates the median of an intarray. |
 | [ft_intarray_clone()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_clone.c)| Create a clone of an intarray. |
-| [unsorted_intarray_delete()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/UNSORTED_intarray_delete.c)| Deletes an element from an intarray, but it changes order. (Good complexity) |
+| [ft_unsorted_intarray_delete()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_unsorted_intarray_delete.c)| Deletes an element from an intarray, but it changes order. (Good complexity) |
 | [ft_intarray_delete()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_delete.c)| Deletes an element from an intarray, and it keeps its order. (Bad complexity) |
 |[ft_intarray_add()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_add.c)| Add an element to an intarray. |
 |[ft_empty_intarray_create()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_empty_intarray_create.c) | Creates an empty intarray. |

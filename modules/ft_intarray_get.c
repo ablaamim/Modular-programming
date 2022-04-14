@@ -6,13 +6,13 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 16:46:00 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/12 17:10:10 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/14 22:52:28 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-int	ft_intarray_get(t_intarray tab, int index)
+int	ft_intarray_get(t_intarray *tab, int index)
 {
-	return (tab.data[index]);
+	return (tab->data[index]);
 }

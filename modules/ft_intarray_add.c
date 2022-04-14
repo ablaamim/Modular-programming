@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_nb_occurences.c                        :+:      :+:    :+:   */
+/*   ft_intarray_add.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/03 16:52:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/14 22:48:01 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/14 22:04:57 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/14 22:29:29 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-int	ft_intarray_nb_occurences(t_intarray *tab, int n)
+void	ft_intarray_add(t_intarray *tab, int value)
 {
-	int	i;
-	int	occ;
 
-	i = 0x0;
-	occ = 0x0;
-	while (i < tab->len)
+	if (tab->len >= tab->alloc)
 	{
-		if (tab->data[i] == n)
-			occ++;
-		i++;
+		write(2, "Error\n", 6);
+		return ;
 	}
-	return (occ);
+	tab->data[tab->len] = value;
+	tab->len++;
 }

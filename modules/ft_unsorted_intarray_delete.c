@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intarray_nb_occurences.c                        :+:      :+:    :+:   */
+/*   ft_unsorted_intarray_delete.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/03 16:52:34 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/14 22:48:01 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/04/14 21:34:56 by ablaamim          #+#    #+#             */
+/*   Updated: 2022/04/14 22:30:19 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-int	ft_intarray_nb_occurences(t_intarray *tab, int n)
+void	ft_unsorted_intarray_delete(t_intarray *tab, int index)
 {
-	int	i;
-	int	occ;
-
-	i = 0x0;
-	occ = 0x0;
-	while (i < tab->len)
+	if (index < 0 || (index >= tab->len))
 	{
-		if (tab->data[i] == n)
-			occ++;
-		i++;
+		write(2, "Error\n", 6);
+		return ;
 	}
-	return (occ);
+	if (index != tab->len -1)
+		tab->data[index] = tab->data[tab->len - 1];
+	tab->len--;
 }

@@ -6,21 +6,24 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 16:31:35 by ablaamim          #+#    #+#             */
-/*   Updated: 2022/04/03 16:32:54 by ablaamim         ###   ########.fr       */
+/*   Updated: 2022/04/14 22:45:45 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "intarray.h"
 
-void	ft_intarray_print_positive_values(t_intarray tab)
+void	ft_intarray_print_positive_values(t_intarray *tab)
 {
 	int	i;
 
 	i = 0x0;
-	while (i < tab.len)
+	while (i < tab->len)
 	{
-		if (tab.data[i] >= 0)
-			ft_putnbr(tab.data[i]);
+		if (tab->data[i] >= 0)
+		{
+			ft_putnbr(tab->data[i]);
+			ft_putchar(' ');
+		}
 		i++;
 	}
 }
