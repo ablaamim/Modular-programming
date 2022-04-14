@@ -6,7 +6,7 @@
 #    By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/03 16:37:01 by ablaamim          #+#    #+#              #
-#    Updated: 2022/04/14 19:48:54 by ablaamim         ###   ########.fr        #
+#    Updated: 2022/04/14 20:38:48 by ablaamim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,10 @@ SRCS = ./modules/ft_intarray_create.c \
 		  ./modules/ft_intarray_max.c \
 		  ./modules/ft_intarray_min.c \
 		  ./modules/ft_intarray_selection_sort.c \
-		  ./modules/ft_atoi.c
+		  ./modules/ft_atoi.c \
+		  ./modules/ft_intarray_sum.c \
+		  ./modules/ft_intarray_average.c \
+		  ./modules/ft_intarray_median.c
 # 	* create our executable file
 # 	* replace all files with .c extension to .o extension
 OBJS 	= $(SRCS:%.c=%.o)
