@@ -26,71 +26,9 @@ as well as authorized functions at [1337](https://1337.ma/en/) school [42 Networ
 
 ### :information_source: Extending my libft with more util function!
 
-> Struct used in intarray module:
-```c
-typedef struct s_intarray
-{
-	int	*tab;
-	int	alloc;
-	int	len;
-} t_intarray;
-```
-
-> Header file :
-
- [modules.h](https://github.com/ablaamim/Libft_extended/blob/master/modules/intarray.h)
-
-> Compilation script :
-
- [Makefile](https://github.com/ablaamim/Libft_extended/blob/master/Makefile)
-
-> Tests :
-
- [main.c]()
-
----
 
 ## Content :
 
 |Function | Description |
 |---      |--- |
-| [ft_intarray_debug()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_debug.c) | Prints the content of an array of integers.. |
-| [ft_putnbr()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_putnbr.c) | Prints numbers in the range of integer type, including INTMAX and INTMIN. |
-| [ft_intarray_print_positive_values()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_print_positive_values.c) | Traverse an array of integers and filters the positive values in order to print them. |
-| [ft_intarray_search()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_search.c)| Traverse an array of ints searching for a set "n", if it accures the function returns 1, otherwise it returns 0. |
-| [ft_intarray_nb_occurences()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_nb_occurences.c) | Traverse an array of ints counting the number of occurences, and it returns the count. |
-| [ft_intarray_create()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_create.c) | Constructor module, it creates an array of size len initialized with zeros. |
-| [ft_intarray_set()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_set.c) | Assinging values in specific indexes. |
-| [ft_intarray_get()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_get.c) | Retrieves an element of an intarray by indexing. |
-| [ft_intarray_concat()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_concat.c) | Concatenates two intarrays and returns a new one allocated by malloc(3). |
-| [ft_intarray_min()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_min.c) | Search for the min value althrough an intarray and returns it. |
-| [ft_intarray_max()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_max.c) | Search for the max value althrough an intarray and returns it. |
-| [ft_intarray_get_index_of_min()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_get_index_of_min.c) | Search for the min value althrough an intarray and returns its index. |
-| [ft_intarray_get_index_of_max()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_intarray_get_index_of_max.c) | Search for the max value althrough an intarray and returns its index. |
-| [ft_intarray_selection_sort()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_selection_sort.c) | Sorting an array of integers using selection sort. |
-| [ft_intarray_length()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_length.c) | Calculates the length of an intarray. |
-| [ft_intarray_destroy()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_destroy.c) | Free what was allocated. |
-| [ft_intarray_sum()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_sum.c) | Sums up an intarray. |
-| [ft_intarray_average()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_average.c)| Calculates the average of an intarray. |
-| [ft_intarray_median()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_median.c) | Calculates the median of an intarray. |
-| [ft_intarray_clone()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_clone.c)| Create a clone of an intarray. |
-| [ft_unsorted_intarray_delete()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_unsorted_intarray_delete.c)| Deletes an element from an intarray, but it changes order. (Good complexity) |
-| [ft_intarray_delete()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_delete.c)| Deletes an element from an intarray, and it keeps its order. (Bad complexity) |
-|[ft_intarray_add()](https://github.com/ablaamim/Libft-Extended/blob/master/modules/ft_intarray_add.c)| Add an element to an intarray. |
-|[ft_empty_intarray_create()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_empty_intarray_create.c) | Creates an empty intarray. |
-
----
-
-## Module 2 : Useful tools :
-
----
-
-## Content :
-
-| Functiontion | Description |
-|--- |--- |
-| [ft_atoi()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_atoi.c) | Converts ascii to integers. |
-| [ft_putchar()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_putchar.c) | Writes a character on stdout using write system call |
-| [ft_putstr()](https://github.com/ablaamim/Libft_extended/blob/master/modules/ft_putstr.c) | Writes a string character by character on stdout using system call write |
-
----
+|           |               |
