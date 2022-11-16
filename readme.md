@@ -10,25 +10,3 @@
 <p/>
 
 ---
-
-## :soccer: The goal :
-
-> Create a complete module in the rules of the art it is necessary to respect the [norm](https://github.com/ablaamim/Libft-Extended/blob/master/srcs/en.norm.pdf), 
-as well as authorized functions at [1337](https://1337.ma/en/) school [42 Network].
-
----
-
-## MODULE 1 : Useful function to manipulate tables of integers :
-
----
-
-> ABSOLUFUCKINLUTELY :heavy_exclamation_mark:
-
-### :information_source: Extending my libft with more util function!
-
-
-## Content :
-
-|Function | Description |
-|---      |--- |
-|           |               |
